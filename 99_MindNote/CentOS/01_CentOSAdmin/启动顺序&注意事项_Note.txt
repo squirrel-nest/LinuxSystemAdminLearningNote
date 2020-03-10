@@ -1,0 +1,45 @@
+安装ntfs文件支持：
+rpm -ivh ntfs-3g-2011.4.12-5.el6.x86_64.rpm
+	or 
+sudo yum install ntfs-3g
+-----------------------------------------------
+
+--载入安装iso文件
+cd /media/iso/centos
+mount -o loop CentOS-6.5-x86_64-bin-DVD1.iso /mnt/iso/centos
+
+or
+mount -o loop /media/iso/centos/CentOS-6.5-x86_64-bin-DVD1.iso /mnt/iso/centos
+
+
+ftp server：
+
+# service vsftpd start
+
+Enable vsftpd start on system boot:
+# chkconfig vsftpd on
+
+# service vsftpd restart
+----------------------------
+openldap server
+
+# service slapd start
+
+Enable vsftpd start on system boot:
+# chkconfig slapd on
+
+# service slapd restart
+需要输入密码：manager123
+---------------------------------------------------------------
+CentOS 7.1 [192.168.1.106]
+mysql
+/usr/local/mysql/my.cnf的启动：
+systemctl start mysqld [mysqld file：/etc/rc.d/init.d/mysqld]
+
+mysqld_multi
+/usr/local/mysql/my-multi.cnf的启动：
+systemctl start mysqld_multi [mysqld_multi file：/etc/rc.d/init.d/mysqld_multi]
+
+mariadb，yum install
+
+systemctl start mysql [mysql file：/etc/rc.d/init.d/mysql]

@@ -1,0 +1,23 @@
+$TTL 86400
+$ORIGIN longzhi.com.local.
+@   IN  SOA     masterdns root.longhzi.com.local. (
+        2017120401  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+@       IN  NS          masterdns            ; master name server for longzhi.com.local
+@       IN  NS          secondarydns         ; secondary name server for longzhi.com.local
+@       IN  A           192.168.1.2
+@       IN  A           192.168.1.3
+@       IN  A           192.168.1.4
+masterdns       IN  A   192.168.1.2
+secondarydns    IN  A   192.168.1.3
+client          IN  A   192.168.1.4
+oralab-gns-vip  IN  A   192.168.1.35
+;
+;sub-domain(oralab.longzhi.com.local) definitions
+$ORIGIN oralab.longzhi.com.local.
+@               IN    NS        oralab-gns-vip.longzhi.com.local. ; name server for the oralab.longzhi.com.local
+; oralab.longzhi.com IN NS    oralab-gns-vip.longzhi.com.local.
