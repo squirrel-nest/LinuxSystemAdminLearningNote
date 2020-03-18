@@ -1,0 +1,39 @@
+
+
+http://www.111cn.net/sys/CentOS/63645.htm
+CentOS 7.0系统安装配置步骤详解
+http://www.geekcome.com/content-10-8397-1.html
+U盘安装CentOS 7的方法
+
+1.启动盘(大白菜启动)
+
+http://wiki.centos.org/HowTos/InstallFromUSBkey
+
+How to Set Up a USB Key to Install CentOS
+
+2.U盘安装 CentOS 7 
+
+http://blog.csdn.net/gaohuaid/article/details/38750283
+
+sda 是我的硬盘对应的文件名（我机子只有一块硬盘），所以sdb就是U盘对应的文件名了，可以看到是sdb4。至此我们重启一下，回到第一个图片所示的界面处，然后按下Tab键，将vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 rd.live.check quiet 改为：vmlinuz initrd=initrd.img inst.stage2=hd:/dev/sdb4 quite
+
+
+
+3.Date&Time
+
+4.
+
+
+----
+5.Partitioning 
+	6.10.4 .5. Recommended Partitioning Scheme
+
+		/boot partition:500mb
+
+
+sycript :GgcjdssLhtjyx'
+
+
+
+
+参考：http://www.111cn.net/sys/CentOS/63645.htm（仅供）

@@ -1,0 +1,2 @@
+iSCSI CHAP认证不完全攻略
+http://blog.csdn.net/sinchb/article/details/8433994

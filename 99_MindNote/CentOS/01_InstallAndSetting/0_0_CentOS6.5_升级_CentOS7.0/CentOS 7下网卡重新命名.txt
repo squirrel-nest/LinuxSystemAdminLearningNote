@@ -1,0 +1,4 @@
+http://www.linuxidc.com/Linux/2014-07/104537.htm
+
+
+CentOS 7下网卡重新命名

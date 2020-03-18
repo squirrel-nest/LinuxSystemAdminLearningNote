@@ -1,0 +1,504 @@
+fdisk、parted无损调整普通分区大小 (附win的c盘分区大小调整)
+http://haibing.org/?p=123
+
+
+环境：oracle linux 6.4
+#fdisk -v
+fdisk (util-linux-ng 2.17.2)
+#parted -v
+parted (GNU parted) 2.1
+我们讲的调整分区大小，都是要保证不损坏分区中数据为前提。
+这里我们讲一下用fdisk、parted调整普通分区的方法。
+操作有风险，重要数据还是要备份保存一下。
+
+最后附一下win的C盘大小调整方法（不使用第三方软件）
+
+一、fdisk普通分区调整：
+
+大概步骤：
+先执行fdisk查看原分区的cylinder起始值，一定要记住。
+再umount分区，进fdisk删除原有分区， 再重建原有分区，再分区的时候，cylinder起始值一定要跟原来的是一样的，要不然就会破坏原分区的数据，只要调整cylinder结束值大小即可扩容分区。
+
+分区建好后， 用e2fsck先检查一下分区， 再用resize2fs扩大就可以了。
+
+切记：此方法适用于扩容分区，如果要缩减分区，特别是根目录，可能会出问题
+
+实例演示：
+我要把swap分区删掉，划分一部分空间到根目录分区/dev/sda2中来，剩余的空间再创建新的swap。
+（增加点实验难度）
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+#df -h
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda2 9.7G 3.7G 5.5G 41% /
+tmpfs 875M 0 875M 0% /dev/shm
+/dev/sda1 194M 50M 135M 27% /boot
+ 
+#fdisk -l /dev/sda
+Disk /dev/sda: 12.9 GB, 12884901888 bytes
+255 heads, 63 sectors/track, 1566 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x0007c9df
+ 
+Device Boot Start End Blocks Id System
+/dev/sda1 * 1 26 204800 83 Linux
+/dev/sda2 26 1301 10240000 83 Linux
+/dev/sda3 1301 1556 2048000 82 Linux swap / Solaris
+具体步骤：
+1、删除swap分区
+先查看一下swap分区有没有在使用:
+
+1
+2
+3
+4
+5
+#free
+total used free shared buffers cached
+Mem: 1790856 154188 1636668 0 15472 58480
+-/+ buffers/cache: 80236 1710620
+Swap: 2047996 0 2047996
+可以看出未使用状态，放心删除
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+#swapoff /dev/sda3
+#fdisk /dev/sda
+Command (m for help): d
+Partition number (1-4): 3
+ 
+Command (m for help): p
+ 
+Device Boot Start End Blocks Id System
+/dev/sda1 * 1 26 204800 83 Linux
+/dev/sda2 26 1301 10240000 83 Linux
+ 
+Command (m for help): w
+2、进入急救rescue模式
+（如果是其它的分区，不影响系统正常运行的，能umount的，就不用进急救模式就可以操作了,我这里实验主要是增加一点难度）
+如果没进急救模式，直接在原系统操作的话，先要umount要扩展的分区
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+#fdisk /dev/sda
+Command (m for help): d 先删除要扩展的分区，这里是根目录/分区
+Partition number (1-4):2
+ 
+Command (m for help): p
+ 
+Device Boot Start End Blocks Id System
+/dev/sda1 * 1 26 204800 83 Linux
+ 
+Command (m for help): n 再把删除的分区重新添加
+Command action
+e extended
+P primary partition (1-4)
+P
+Partition number (1-4):2
+First cylinder (26-1566,default 26):26 这里一定要跟原先的对应
+Last cylinder ,+cylinders or +size{K,M,G} (26-1566,default 1566):1433
+原先是到1301，在原先的基础上加一部分，留点给swap
+Command (m for help): w
+#reboot
+3、resize2fs
+使用partprobe同步内存中分区信息
+使用e2fsck强制检查分区
+#e2fsck -f /dev/sda2
+（如果是根目录扩容，重启后这两个命令执行都不会成功所以也不用执行）
+
+使用resize2fs重新定义文件系统大小（这步一定要做，要不然容量不会有变化）
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+# resize2fs /dev/sda2
+#df -h
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda2 11G 3.7G 6.4G 37% /
+tmpfs 875M 0 875M 0% /dev/shm
+/dev/sda1 194M 50M 135M 27% /boot
+ 
+#fdisk -l /dev/sda
+/dev/sda1 * 1 26 204800 83 Linux
+/dev/sda2 26 1433 11304748+ 83 Linux
+对比发现，根目录空间已经扩大了。
+
+恢复swap空间
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+#fdisk /dev/sda
+Command (m for help): n
+Command action
+e extended
+p primary partition (1-4)
+p
+Partition number (1-4): 3
+First cylinder (1434-1566, default 1434):
+Using default value 1434
+Last cylinder, +cylinders or +size{K,M,G} (1434-1566, default 1566):
+Using default value 1566
+ 
+Command (m for help): p
+ 
+Device Boot Start End Blocks Id System
+/dev/sda1 * 1 26 204800 83 Linux
+/dev/sda2 26 1433 11304748+ 83 Linux
+/dev/sda3 1434 1566 1068322+ 83 Linux
+ 
+Command (m for help): t
+Partition number (1-4): 3
+Hex code (type L to list codes): 82
+Changed system type of partition 3 to 82 (Linux swap / Solaris)
+ 
+Command (m for help): p
+ 
+Device Boot Start End Blocks Id System
+/dev/sda1 * 1 26 204800 83 Linux
+/dev/sda2 26 1433 11304748+ 83 Linux
+/dev/sda3 1434 1566 1068322+ 82 Linux swap / Solaris
+ 
+#mkswap /dev/sda3
+#swapon /dev/sda3
+#free
+total used free shared buffers cached
+Mem: 1790856 145724 1645132 0 13020 57600
+-/+ buffers/cache: 75104 1715752
+Swap: 1068316 0 1068316
+swap分区回来了,而且也相应的变少了
+
+总结：
+通过这个也可以引申出来分区的合理性。
+比如可以把第一个分区给/boot 第二个分区给根目录/，第三个分区给swap,最后要保留一点空间不要分配备用
+这样万一根目录/空间不够，可以先把swap删除，把根目录/扩容，然后再挂上swap分区（扩容根目录要进急救rescue模式）
+swap分区自己扩容也很方便。
+可以根据情况灵活分配
+比如专门放数据的、或者放日志的分区，随时都在变大，也可以单独出来，放在分区的后面，这样以后扩容也方便。
+
+二、parted分区调整
+parted可以对自己格式化的分区进行调整分区。
+这里要注意：一定要是parted中的命令mkfs格式化的分区,用系统自带的mkfs.ext3之类的命令格式化的分区是没办法再用parted命令调整大小的。
+parted还不支持格式化ext3分区
+实例演示：
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+#parted /dev/sdb
+GNU Parted 2.1
+Using /dev/sdb
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+(parted) p
+Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sdb: 12.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+ 
+Number Start End Size File system Name Flags
+1 17.4kB 300MB 300MB ext2 db1
+2 300MB 500MB 200MB ext2 db2
+对于它自己格式的分区，我们可以随意调整大小
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+(parted) resize
+Partition number? 2
+Start? [300MB]?
+End? [500MB]? 600
+OK/Cancel? o
+(parted) p
+Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sdb: 12.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+ 
+Number Start End Size File system Name Flags
+1 17.4kB 300MB 300MB ext2 db1
+2 300MB 600MB 300MB ext2 db2
+ 
+(parted) resize
+Partition number? 2
+Start? [300MB]?
+End? [600MB]? 400
+OK/Cancel? o
+(parted) p
+Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sdb: 12.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+ 
+Number Start End Size File system Name Flags
+1 17.4kB 300MB 300MB ext2 db1
+2 300MB 400MB 100MB ext2 db2
+如果是系统用自带的mkfs.ext3之类的命令格式化的分区，用parted调整分区会报错：
+先格式化一下，再回到parted去调整大小
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+#mkfs.ext2 /dev/sdb2
+#parted /dev/sdb
+Number Start End Size File system Name Flags
+1 17.4kB 300MB 300MB ext2 db1
+2 300MB 400MB 100MB ext2 db2
+ 
+(parted) resize
+Partition number? 2
+Start? [300MB]?
+End? [400MB]? 500
+Error: File system has an incompatible feature enabled. Compatible features are has_journal,
+dir_index, filetype, sparse_super and large_file. Use tune2fs or debugfs to remove features.
+上面的例子都是ext2格式的，现在基本上这种格式都不再使用了。
+但parted还不支持格式化ext3格式，必须要用系统自带的mkfs.ext3命令去格式化，但格式化后就不能再用parted调整分区大小了。
+这是挺纠结的。
+
+but
+
+还是有解决办法的
+就是先用parted格式化成ext2格式，再用tune2fs命令转换成ext3格式的，这样一操作就还能用parted调整这个分区大小
+
+1
+2
+3
+4
+Number Start End Size File system Name Flags
+1 17.4kB 300MB 300MB ext2 db1
+2 300MB 400MB 100MB ext2 db2
+3 400MB 600MB 200MB ext2 db3
+把/dev/sdb3转化成ext3格式
+
+1
+2
+3
+4
+5
+#tune2fs -j /dev/sdb3
+tune2fs 1.41.12 (17-May-2010)
+Creating journal inode: done
+This filesystem will be automatically checked every 30 mounts or
+180 days, whichever comes first. Use tune2fs -c or -i to override.
+再回到parted中
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+#parted /dev/sdb
+GNU Parted 2.1
+Using /dev/sdb
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+(parted) p
+Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sdb: 12.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+ 
+Number Start End Size File system Name Flags
+1 17.4kB 300MB 300MB ext2 db1
+2 300MB 400MB 100MB ext2 db2
+3 400MB 600MB 200MB ext3 db3
+再调整/dev/sdb3的大小
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+(parted) resize
+Partition number? 3
+Start? [400MB]?
+End? [600MB]? 700
+error: block relocator should have relocated 8706
+这里有个错误，提示块必须要移动8706
+可以调整一下要扩大的大小
+ 
+(parted) resize
+Partition number? 3
+Start? [400MB]?
+End? [600MB]? 900
+Warning: A resize operation on this file system will use EXPERIMENTAL code
+that MAY CORRUPT it (although no one has reported any such damage yet).
+You should at least backup your data first, and run 'e2fsck -f' afterwards.
+OK/Cancel? o
+(parted) p
+Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sdb: 12.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+ 
+Number Start End Size File system Name Flags
+1 17.4kB 300MB 300MB ext2 db1
+2 300MB 400MB 100MB ext2 db2
+3 400MB 900MB 500MB ext3 db3
+成功扩容
+
+所以，如果想用parted调整分区大小的功能，分区的时候可以使用parted，也可以使用fdisk，但是格式化分区的时候，只能使用parted自己的mkfs
+
+LVM卷组的就不讲了，这个大家都知道也都会。

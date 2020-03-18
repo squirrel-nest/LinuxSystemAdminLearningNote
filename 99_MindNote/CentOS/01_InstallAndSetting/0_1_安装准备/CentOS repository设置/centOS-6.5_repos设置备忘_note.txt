@@ -1,0 +1,98 @@
+CentOS6.5安装repos备忘
+
+
+
+--载入安装iso文件
+cd /media/iso/centos
+mount -o loop CentOS-6.5-x86_64-bin-DVD1.iso /mnt/iso/centos
+
+or
+mount -o loop /media/iso/centos/CentOS-6.5-x86_64-bin-DVD1.iso /mnt/iso/centos
+
+开机载入，需要更改fstab
+
+
+
+
+1.
+“6.1.4. Upgrading the System Off-line with ISO and Yum”
+1)“Create a target directory to mount your ISO image.”
+2)“mount -o loop iso_name mount_dir”
+3)“Copy the media.repo file from the mount directory to the /etc/yum.repos.d/”
+4)“Edit the new configuration file so that it points to the Red Hat Enterprise Linux installation ISO.”
+-- baseurl=file:///mnt/iso
+
+
+在 /etc/yum.repos.d/ 目录下建文件  CentOS6Media.repo
+
+更改内容：
+[centos6.5-media]  -- 标志
+name=CentOS-$releasever - Media - 6.5  --name
+
+baseurl=file:///mnt/iso/centos/
+
+enabled=1
+
+
+
+
+需要
+6.4. “Configuring Yum and Yum Repositories”
+
+
+yum repolist all
+“use yum repolist all to list available repository IDs”
+
+“Enabling a Yum Repository”
+“yum-config-manager --enable repository…”
+
+
+
+
+ yum repolist all
+ yum-config-manager --enable centos6-media
+
+
+
+
+“Disabling a Yum Repository”
+
+“yum-config-manager --disable repository…”
+
+
+
+--需要暂时将默认的disable掉
+ yum-config-manager --disable base
+ yum-config-manager --disable extras
+ yum-config-manager --disable updates
+
+
+
+“yum list abrt-addon\*” |more
+yum list all
+Yum list installed
+
+
+
+
+
+
+5) yum install ….    .rpm
+-- 需要再研究：增加：
+
+
+6.2.5. Removing Packages
+
+yum remove package_name…
+
+“Removing a package when other”
+
+
+
+
+
+2.
+“6.4.6. Creating a Yum Repository”
+
+
+Sent from my iPad=

@@ -1,0 +1,944 @@
+  325  ls
+  326  cd tomcat/
+  327  ls
+  328  cd apache-tomcat-8.0.14
+  329  ls
+  330  cd conf
+  331  ls
+  332  cd Catalina/
+  333  ls
+  334  cd localhost/
+  335  ls
+  336  cd ..
+  337  ls
+  338  ftp 192.168.0.9
+  339  ls
+  340  ftp 192.168.0.9
+  341  pwd
+  342  ls
+  343  ftptest 192.168.0.9
+  344  ftptest 192.168.0.9
+  345  ftp 192.168.0.9
+  346  bye
+  347  exit
+  348  ls
+  349  cd ..
+  350  ls
+  351  cd usr
+  352  cd local
+  353  ls
+  354  mkdir webapps
+  355  mkdir javaweb
+  356  ls
+  357  mv javaweb ./webapps/
+  358  ls
+  359  cd webapps/
+  360  ls
+  361  cd javaweb/
+  362  ls
+  363  mkdir lzejb
+  364  mkdir lzrmi
+  365  mkdir lzjdbc
+  366  ls
+  367  mkdir lzjndi
+  368  ls
+  369  mkdir lzdata
+  370  ls
+  371  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/ &
+  372  ps -ef |grep rmi
+  373  kill 3162
+  374  ps -ef |grep rmi
+  375  cd ..
+  376  ls
+  377  cd ..
+  378  ls
+  379  cd ..
+  380  ls
+  381  cd home
+  382  ls
+  383  cd ..
+  384  pwd
+  385  ls
+  386  cd installs
+  387  ls
+  388  cd ..
+  389  ftp 192.168.0.9
+  390  yum install ftp
+  391  ftp 192.168.0.9
+  392  ls
+  393  pwd
+  394  cd ..
+  395  ls
+  396  cd installs
+  397  ls
+  398  mkdir openldap
+  399  ls
+  400  cd openldap
+  401  ls
+  402  mkdir sample
+  403  ls
+  404  mv /*.ldif ./sample/
+  405  ls
+  406  cd sampe
+  407  ls
+  408  cd sample/
+  409  ls
+  410  systemctl status slapd
+  411  ldapadd -x -D "cn=Manager,dc=longzhi,dc=com" -W -f ldap_lzdata.ldif
+  412  systemctl start slapd
+  413  ldapadd -x -D "cn=Manager,dc=longzhi,dc=com" -W -f ldap_lzdata.ldif
+  414  systemctl enable slapd
+  415  systemctl status slapd
+  416  firewall --list-all
+  417  firewall-cmd --list-all
+  418  cd ..
+  419  pwd
+  420  cd ..
+  421  ls
+  422  cd ..
+  423  pwd
+  424  cd home
+  425  ls
+  426  LS
+  427  cd ..
+  428  pwd
+  429  cd ls
+  430  ls
+  431  cd usr
+  432  ls
+  433  cd local/
+  434  ls
+  435  cd webapps
+  436  ls
+  437  cd javaweb/
+  438  ls
+  439  cd lzrmi
+  440  ls
+  441  cd ..
+  442  cd lzrmi
+  443  ls
+  444  ftp 192.168.0.9
+  445  mv /home/ftptest/lzrmi.zip ./
+  446  ls
+  447  mv /home/ftptest/lzrmi.zip
+  448  mv /home/ftptest/lzrmi.zip ./lzrmi.zip
+  449  mv /home/ftptest/lzrmi.zip ./
+  450  cd ..
+  451  pwd
+  452  cd /home
+  453  ls
+  454  cd ftptest
+  455  ls
+  456  cd /usr/local/webapps/javaweb/lzrmi
+  457  ls
+  458  cd ..
+  459  ls
+  460  cd lzrmi
+  461  ftp 192.168.0.9
+  462  ls
+  463  unzip lzrmi.zip
+  464  ls
+  465  cd lzrmi
+  466  ls
+  467  pwd
+  468  cd ..
+  469  ls
+  470  ls -l
+  471  rm lzrmi*.* -r -f
+  472  ls
+  473  rm lzrmi -r -f
+  474  ls
+  475  ftp 192.168.0.9
+  476  ls
+  477  unzip lzrmi.zip
+  478  ls
+  479  cd lzrmi
+  480  ls
+  481  mv lzrmi/* ./ -r
+  482  mv lzrmi/* ./ 
+  483  mv lzrmi ./ 
+  484  ls
+  485  cd ..
+  486  ls
+  487  mv lzrmi ./
+  488  mv lzrmi ./ -f
+  489  mv lzrmi/* ./ -f
+  490  ls
+  491  cd lzrmi
+  492  ls
+  493  cd ..
+  494  rm lzrmi -r
+  495  rm lzrmi.zip -f
+  496  ls
+  497  cd ..
+  498  cd classes
+  499  ls
+  500  cd lzrmi
+  501  ls
+  502  cd classes/
+  503  ls
+  504  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/ &
+  505  java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.security.policy=server.policy      -Djava.rmi.server.hostname=192.168.0.9      engine.ComputeEngine &
+  506  java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.security.policy=client.policy         client.ComputePi 192.168.0.9 45
+  507  ls
+  508  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/      -Djava.security.policy=client.policy         client.ComputePi 192.168.0.104 45
+  509  cd client
+  510  ls
+  511  vim ComputePi.java 
+  512  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar 
+  513      client/ComputePi.java client/Pi.java
+  514  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     client/ComputePi.java client/Pi.java
+  515  cd ..
+  516  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     client/ComputePi.java client/Pi.java
+  517  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/      -Djava.security.policy=client.policy         client.ComputePi 192.168.0.104 45
+  518  systemctl --list-all
+  519  systemctl-cmd --list-all
+  520  firewall-cmd --list-all
+  521  firewall-cmd --add-port 1099/tcp
+  522  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/      -Djava.security.policy=client.policy         client.ComputePi 192.168.0.104 45
+  523  firewall-cmd --list-all
+  524  cd client
+  525  ls
+  526  cd ..
+  527  ls
+  528  vim client.policy 
+  529  java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.9 -Djava.security.policy=client.policy -Djava.security.debug=access,failure client.ComputePi 192.168.0.9 45
+  530  clear
+  531  java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.9 -Djava.security.policy=client.policy -Djava.security.debug=access,failure client.ComputePi 192.168.0.9 45
+  532  cd client
+  533  ls
+  534  vim ComputePi.java
+  535  firewall-cmd --add-port 40286/tcp
+  536  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.104 -Djava.security.policy=client.policy -Djava.security.debug=access,failure client.ComputePi 192.168.0.104 45
+  537  cd ..
+  538  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.104 -Djava.security.policy=client.policy -Djava.security.debug=access,failure client.ComputePi 192.168.0.104 45
+  539  ls
+  540  pwd
+  541  vim client.policy 
+  542  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.104 -Djava.security.policy=client.policy -Djava.security.debug=access,failure client.ComputePi 192.168.0.104 45
+  543  clear
+  544  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.104 -Djava.security.policy=client.policy -Djava.security.debug=access,failure client.ComputePi 192.168.0.104 45
+  545  cd client
+  546  vim ComputePi.java
+  547  cd ..
+  548  ls
+  549  cd engine
+  550  ls
+  551  vim 
+  552  ls
+  553  vim ComputeEngine.java
+  554  ls
+  555  cd ..
+  556  pwd
+  557  ls
+  558  ps -ef |grep rmi
+  559  kill 3728
+  560  kill 3744
+  561  ps -ef |grep rmi
+  562  ls
+  563  vim server.policy
+  564  ps -ef |grep rmi
+  565  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ &
+  566  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/      -Djava.security.policy=server.policy      -Djava.rmi.server.hostname=192.168.0.104      engine.ComputeEngine &
+  567  java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/      -Djava.security.policy=client.policy         client.ComputePi 192.168.0.104 45
+  568  pwd
+  569  ls
+  570  wifefall-cmd --list-all
+  571  wirefall-cmd --list-all
+  572  firewall-cmd --list-all
+  573  firewall-cmd --add-port=2100-2199/udp
+  574  firewall-cmd --list-all
+  575  cd /home
+  576  ls -l
+  577  chown 755 ftptest
+  578  ls -l
+  579  cd ftptest
+  580  ls
+  581  ls -l
+  582  firewall-cmd --reload
+  583  cd ..
+  584  ls -l
+  585  chown 777 ftptest
+  586  ls -l
+  587  chown ftptest:ftp ftptest
+  588  chmod ftptest 755
+  589  ls
+  590  ls -l
+  591  chmod 755 ftptest
+  592  ls -l
+  593  cd ..
+  594  ls
+  595  cd installs
+  596  ls
+  597  cd openldap/
+  598  ls
+  599  cd ..
+  600  ls
+  601  cd /etc
+  602  cd vsftp
+  603  ls
+  604  cd vsftpd
+  605  ls
+  606  vim vsvi
+  607  firewall-cmd --add-port=2174/tcp
+  608  cd /home/ftptest
+  609  ls
+  610  cd /usr/local/webapps/javaweb/
+  611  ls
+  612  cd lzejb/
+  613  mv /home/ftptest/*.jar ./
+  614  ls
+  615  mkdir classes
+  616  ls
+  617  mv *.jar ./classes/
+  618  ls
+  619  cd classes
+  620  ls
+  621  exit
+  622  ls
+  623  ftp 192.168.0.9
+  624  ls
+  625  cd home
+  626  cd /home
+  627  ls
+  628  cd ftptest
+  629  ls
+  630  mv localhost.zip /installs/apache/tomcat/
+  631  cd /installs/apache/tomcat/
+  632  ls
+  633  mv localhost.zip apache-tomcat-8.0.14/conf/
+  634  ls
+  635  cd apache-tomcat-8.0.14
+  636  cd conf/
+  637  ls
+  638  mv localhost.zip Catalina/
+  639  cd Catalina/
+  640  ls
+  641  unzip localhost.zip
+  642  ls
+  643  cd localhost
+  644  ls
+  645  cd ..
+  646  cd localhost
+  647  ls
+  648  cd ..
+  649  ls
+  650  cd ..
+  651  cd bin
+  652  ls
+  653  ./startup.sh
+  654  shutdown -P now
+  655  history |more
+  656  ls   /usr/local/bin /usr/bin /bin  /usr/local/sbin /usr/sbin /sbin | wc -l
+  657  history |more
+  658  hisory
+  659  history
+  660  history |more
+  661  cd /installs
+  662  cd apache/
+  663  ls
+  664  cd tomcat/
+  665  ls
+  666  cd apache-tomcat-8.0.14
+  667  cd bin/
+  668  ls
+  669  ./startup.sh
+  670  ls
+  671  cd /
+  672  cd usr/local
+  673  ls
+  674  cd webapps/
+  675  ls
+  676  cd javaweb/
+  677  ls
+  678  cd lzejb/
+  679  ls
+  680  midir lib
+  681  ls
+  682  mkdir lib
+  683  ls
+  684  cd classes/
+  685  ls
+  686  cd /installs/redhat/wildfly/
+  687  cd wildfly-8.1.0.Final
+  688  cd bin
+  689  ./domain.sh 
+  690  exit
+  691  cd /
+  692  pwd
+  693  cd installs/redhat/wildfly/
+  694  ls
+  695  wget http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.tar.gz
+  696  ls
+  697  cd wildfly-8.1.0.Final
+  698  ls
+  699  cd bin
+  700  ./domain.sh 
+  701  clear
+  702  ls
+  703  cd ..
+  704  ks
+  705  ls
+  706  tar -zxvf wildfly-8.2.0.Final.tar.gz 
+  707  ls
+  708  cd wildfly-8.2.0.Final
+  709  cd domain
+  710  ls
+  711  cd configuration/
+  712  ls
+  713  vim domain.xml
+  714  vim host.xml
+  715  vim domain.xml
+  716  vim host.xml
+  717  vim domain.xml
+  718  cd ../../bin
+  719  ./domain.sh 
+  720  cd ../domain/configuration/
+  721  ls
+  722  vim host.xml
+  723  vim domain.xml
+  724  cd ../../bin
+  725  ./domain.sh 
+  726  pwd
+  727  ls
+  728  cd ../domain/configuration/
+  729  ls
+  730  vim host.xml
+  731  cd /
+  732  cd installs/redhat/wildfly/wildfly-8.1
+  733  cd installs/redhat/wildfly/wildfly-8.1.0.Final
+  734  pwd
+  735  cd bin 
+  736  ./domain.sh
+  737  exit
+  738  cd installs
+  739  ls
+  740  cd /installs/redhat/wildfly/
+  741  ls
+  742  pwd
+  743  diff ./wildfly-8.1.0.Final/domain/configuration/domain.xml ./wildfly-8.2.0.Final/domain/configuration/domain.xml 
+  744  diff ./wildfly-8.1.0.Final/domain/configuration/host.xml ./wildfly-8.2.0.Final/domain/configuration/host.xml 
+  745  cd wildfly-8.2.0.Final
+  746  ls
+  747  cd domain/
+  748  cd configuration/
+  749  vim host.xml
+  750  cd ..
+  751  pwd
+  752  cd ..
+  753  cd bin
+  754  ./domain.sh
+  755  pwd
+  756  ./domain.sh
+  757  cd ..
+  758  cd domain
+  759  cd configuration/
+  760  ls
+  761  vim domain.xml
+  762  cd ..
+  763  diff ./wildfly-8.1.0.Final/domain/configuration/host.xml ./wildfly-8.2.0.Final/domain/configuration/host.xml 
+  764  diff ./wildfly-8.1.0.Final/domain/configuration/domain.xml ./wildfly-8.2.0.Final/domain/configuration/domain.xml 
+  765  cd wildfly-8.2.0.Final
+  766  cd domain
+  767  cd configuration/
+  768  ls
+  769  vim host.xml
+  770  vim domain.xml
+  771  cd ..
+  772  cd bin
+  773  ./domain.sh 
+  774  ps -ef |grep domian
+  775  ps -ef |grep Wild
+  776  cd ..
+  777  ls
+  778  cd domain/
+  779  ls
+  780  cd configuration/
+  781  ls
+  782  vim domain.xml 
+  783  vim host.xml
+  784  cd ../..
+  785  cd bin
+  786  ls
+  787  ./domain.sh 
+  788  ps -ef |grep Final
+  789  vim host.xml
+  790  cd ..
+  791  cd bin
+  792  ls
+  793  cd ..
+  794  ls
+  795  cd standalone/
+  796  ls
+  797  cd configuration/
+  798  ls
+  799  vim standalone.xml
+  800  cd ../..
+  801  cd bin
+  802  ./standalone.sh 
+  803  ls
+  804  ./add-user.sh 
+  805  ./domain.sh 
+  806  cd ../domain/configuration/
+  807  ls
+  808  vim domain.xml
+  809  vim host.xml
+  810  cd ../..
+  811  cd bin
+  812  ./domain.sh 
+  813  cd ../domain/configuration/
+  814  ls
+  815  vim domain.xml
+  816  vim host.xml
+  817  vim domain.xml
+  818  cd ../../bin
+  819  ./domain.sh 
+  820  cd ..
+  821  cd wildfly-8.1
+  822  cd wildfly-8.1.0.Final
+  823  cd bin
+  824  ./domain.sh
+  825  pwd
+  826  ./domain.sh
+  827  exit
+  828  cd /installs/redhat/wildfly/
+  829  ls
+  830  cd wildfly-8.2.0.Final
+  831  cd bin
+  832  ./domain.sh 
+  833  shutdown -P now
+  834  cd /installs/redhat/wildfly/wildfly-8.1.0.Final/
+  835  cd domain
+  836  ls
+  837  cd configuration/
+  838  ls
+  839  vim host.xml
+  840  diff host.xml host-master.xml 
+  841  diff host.xml host-slave.xml 
+  842  ls
+  843  vim mgmt-users.properties 
+  844  EXIT
+  845  exit
+  846  ls
+  847  cd /installs/redhat/wildfly/
+  848  ls
+  849  cd wildfly-8.2.0.Final
+  850  ls
+  851  cd bin
+  852  ./domain.sh 
+  853  cd ..
+  854  ls
+  855  rm wildfly-8.2.0.Final -r -f
+  856  ls
+  857  ls -l
+  858  rm wildfly-8.1.0.Final.tar.gz
+  859  ls
+  860  ls ~/
+  861  cd ..
+  862  ls
+  863  cd /
+  864  ls
+  865  cd ~
+  866  ls
+  867  cd /installs/redhat/wildfly/
+  868  ls
+  869  tar -zxvf wildfly-8.2.0.Final.tar.gz 
+  870  cd wildfly-8.2.0.Final
+  871  ls
+  872  cd domain
+  873  ls
+  874  cd configuration/
+  875  ls
+  876  vim host.xml
+  877  ./../../bin/./domain.sh 
+  878  vim host.xml
+  879  ./../../bin/./domain.sh 
+  880  vim host.xml
+  881  ./../../bin/./domain.sh 
+  882  vim host.xml
+  883  ./../../bin/./add-user.sh 
+  884  ./../../bin/./domain.sh 
+  885  vim host.xml
+  886  ./../../bin/./domain.sh 
+  887  ls
+  888  vim mgmt-users.properties 
+  889  ls
+  890  cd ..
+  891  ls
+  892  diff ./wildfly-8.2.0.Final/bin/domain.sh ./wildfly-8.1.0.Final/bin/domain.sh
+  893  clear
+  894  diff ./wildfly-8.2.0.Final/bin/domain.sh ./wildfly-8.1.0.Final/bin/domain.sh
+  895  cd wildfly-8.2.0.Final
+  896  cd bin
+  897  ls
+  898  vim domain.conf
+  899  vim domain.sh
+  900  ls
+  901  cd ..
+  902  ls
+  903  cd domain/
+  904  ls
+  905  cd log
+  906  ls
+  907  vim host-controller.log 
+  908  exit
+  909  ls
+  910  cd /
+  911  ls
+  912  cd installs
+  913  cd redhat/wildfly/
+  914  ls
+  915  cd wildfly-8.2.0.Final
+  916  ls
+  917  cd domain/
+  918  cd configuration/
+  919  ls
+  920  vim host.xml
+  921  shutdown -P now
+  922  ls
+  923  cd /installs/redhat/wildfly/
+  924  ls
+  925  cd wildfly-9.0.0.Alpha1
+  926  ls
+  927  cd domain/
+  928  ls
+  929  cd configuration/
+  930  ls
+  931  vim domain.xml 
+  932  vim host.xml 
+  933  ../../bin/.domain.sh
+  934  ./../../bin/.domain.sh
+  935  ./../../bin/./domain.sh 
+  936  vim host.xml
+  937  cd ..
+  938  cd wildfly-8.2.0.Final
+  939  ls
+  940  cd bin
+  941  ./domain.sh 
+  942  cd ..
+  943  cd wildfly-9.0.0.Alpha1
+  944  cd bin
+  945  ./domain.sh 
+  946  ls
+  947  ipaddr
+  948  ip addr
+  949  nmcli device status
+  950  nmcli dev wifi list
+  951  netui dev wifi connect TP-LINK_HOME password maria5029
+  952  history
+  953  netui
+  954  nmtui
+  955  pwd
+  956  cd //etc/sysco nfi g /netwo rk-scri pts/
+  957  cd /etc/sysconfig /network-scripts/
+  958  ls
+  959  cd network-scripts/
+  960  ls
+  961  vim ifcfg-TP-LINK_HOME 
+  962  nmtui
+  963  nmcli device status
+  964  nmtui
+  965  ip -V
+  966  ip addr
+  967  ip link
+  968  nmcli connection show
+  969  nmcli connection show --active
+  970  nmcli device status
+  971  nmcli con show
+  972  nmcli dev wifi list
+  973  nmtui dev wifi connect TP-LINK_HOME password maria5029
+  974  nmtui edit
+  975  nmcli device status
+  976  ip addr
+  977  ls
+  978  vim ifcfg-wlan0
+  979  vim ifcfg-TP-LINK_HOME 
+  980  cp ifcfg-TP-LINK_HOME ifcfg-TP-LINK_HOME.old
+  981  ls
+  982  vim ifcfg-TP-LINK_HOME 
+  983  nmtui dev wifi connect TP-LINK_HOME password maria5029
+  984  nmcli dev wifi connect TP-LINK_HOME password maria5029
+  985  ls
+  986  vim ifcfg-TP-LINK_HOME
+  987  vim ifcfg-TP-LINK_HOME_1
+  988  ip addr
+  989  cd /
+  990  ls
+  991  cd installs/
+  992  cd redhat/
+  993  cd wildfly/
+  994  cd wildfly-9.0.0.Alpha1
+  995  cd bin
+  996  ./domain.sh
+  997  ps -ef |grep wildfly
+  998  ps -ef |grep domain
+  999  cd /installs/redhat/wildfly/wildfly-9.0.0.Alpha1
+ 1000  ls
+ 1001  cd bin
+ 1002  ls
+ 1003  ./domain.sh &
+ 1004  LS
+ 1005  ls
+ 1006  ps -ef |grep mysql
+ 1007  systemctl mysqld status
+ 1008  systemctl status mysqld
+ 1009  cd /
+ 1010  cd /installs/
+ 1011  ls
+ 1012  cd /
+ 1013  cd usr
+ 1014  ls
+ 1015  cd local/
+ 1016  ls
+ 1017  cd webapps
+ 1018  ls
+ 1019  cd ..
+ 1020  yum install mysql
+ 1021  ls
+ 1022  cd ..
+ 1023  ls
+ 1024  cd local
+ 1025  ls
+ 1026  cd apache/
+ 1027  ls
+ 1028  cd ..
+ 1029  ls
+ 1030  cd ..
+ 1031  ls
+ 1032  cd ..
+ 1033  ls
+ 1034  pwd
+ 1035  systemctl status mysqld
+ 1036  systemctl status mysql
+ 1037  systemctl status mariadb
+ 1038  mariadb -version
+ 1039  mysqld -version
+ 1040  mysql -version
+ 1041  systemctl status mysql
+ 1042  systemctl status MySQL
+ 1043  systemctl status mysql.service
+ 1044  systemctl enable mysql.service
+ 1045  mysql -u root -p -h localhost
+ 1046  mysql -u root
+ 1047  mysqladmin -u root password "root123"
+ 1048  sudo rpm --import http://nginx.org/keys/nginx_signing.key
+ 1049  sudo rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+ 1050  sudo yum install nginx
+ 1051  sudo systemctl start nginx
+ 1052  sudo systemctl enable nginx
+ 1053  sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+ 1054  sudo firewall-cmd --reload
+ 1055  sudo yum install mariadb-server
+ 1056  sudo systemctl start mariadb
+ 1057  sudo systemctl enable mariadb
+ 1058  sudo mysql_secure_installation
+ 1059  sudo yum php php-fpm php-mysql
+ 1060  sudo yum install php php-fpm php-mysql
+ 1061  sudo yum search php-
+ 1062  sudo systemctl start php-fpm
+ 1063  sudo systemctl enable php-fpm
+ 1064  sudo systemctl disable httpd
+ 1065  sudo vim /etc/nginx/conf.d/default.conf
+ 1066  sudo vim /etc/nginx/nginx.conf
+ 1067  vim /etc/php.ini
+ 1068  sed by the date functions
+ 1069  ; http://php.net/date.timezone
+ 1070  date.timezone = "PRC"
+ 1071  ; http://php.net/date.default-latitude
+ 1072  ;date.default_latitude = 31.7667
+ 1073  ; http://php.net/date.default-longitude
+ 1074  ;date.default_longitude = 35.2333
+ 1075  ; http://php.net/date.sunrise-zenith
+ 1076  ;date.sunrise_zenith = 90.583333
+ 1077  "/etc/php.ini" 1797L, 64949C written
+ 1078  tzselect
+ 1079  vim /etc/php.ini
+ 1080  sudo systemctl restart nginx
+ 1081  sudo systemctl restart php-fpm
+ 1082  cd /var/www/html
+ 1083  ls
+ 1084  vim test.php
+ 1085  ls
+ 1086  vim test.php
+ 1087  cd /etc
+ 1088  cd nginx
+ 1089  cd conf.d
+ 1090  ls
+ 1091  vim default.conf
+ 1092  ls
+ 1093  cp default.conf default.conf.org
+ 1094  vim default.conf
+ 1095  sudo systemctl restart nginx
+ 1096  sudo systemctl status nginx
+ 1097  sudo systemctl stop nginx
+ 1098  sudo systemctl start nginx
+ 1099  sudo systemctl status nginx
+ 1100  sudo systemctl restart php-fpm
+ 1101  sudo systemctl status nginx
+ 1102  sudo systemctl start nginx
+ 1103  vim default.conf
+ 1104  sudo systemctl status nginx
+ 1105  sudo systemctl start nginx
+ 1106  ls
+ 1107  mv default.conf default.conf.error
+ 1108  cp default.conf.org default.conf
+ 1109  sudo systemctl start nginx
+ 1110  sudo systemctl restart php-fpm
+ 1111  vim default.conf
+ 1112  cd ..
+ 1113  pwd
+ 1114  cd usr
+ 1115  cd /usr/local/
+ 1116  ls
+ 1117  cd share
+ 1118  ls
+ 1119  vim /etc/conf.d/
+ 1120  ls /etc/conf.d/
+ 1121  cd /
+ 1122  cd etc
+ 1123  cd conf.d
+ 1124  ls
+ 1125  ps -ax | grep nginx
+ 1126  cd nginx
+ 1127  ls
+ 1128  cd conf.d
+ 1129  ls
+ 1130  vim default.conf
+ 1131  cd //usr/share/nginx/html
+ 1132  ls
+ 1133  mv /var/www/html/*.php ./
+ 1134  ls
+ 1135  sudo service nginx restart
+ 1136  sudo service php-fpm restart
+ 1137  cd /etc/nginx
+ 1138  ls
+ 1139  cd conf.d
+ 1140  ls
+ 1141  vim default.conf
+ 1142  sudo service nginx restart
+ 1143  sudo service php-fpm restart
+ 1144  cd /
+ 1145  cd /usr/local/
+ 1146  ls
+ 1147  cd share
+ 1148  ls
+ 1149  cd ..
+ 1150  cd share/
+ 1151  ls
+ 1152  cd ..
+ 1153  ls
+ 1154  cd ..
+ 1155  ls
+ 1156  cd share
+ 1157  ls
+ 1158  cd ngxinx
+ 1159  c nginx
+ 1160  ls
+ 1161  cd ngins
+ 1162  cd nginx
+ 1163  ls
+ 1164  cd html
+ 1165  ls
+ 1166  cp test.php /var/www/html/
+ 1167  ls
+ 1168  mv test.php test_bak.php
+ 1169  sudo service nginx restart
+ 1170  sudo service php-fpm restart
+ 1171  LS
+ 1172  ls
+ 1173  cd /etc/nginx
+ 1174  ls
+ 1175  cd conf.d
+ 1176  ls
+ 1177  vim default.conf
+ 1178  cd /usr/local/nginx/html
+ 1179  cd /usr
+ 1180  cd local
+ 1181  ls
+ 1182  cd share
+ 1183  ls
+ 1184  cd ..
+ 1185  ls
+ 1186  cd share
+ 1187  ls
+ 1188  cd xginx
+ 1189  ls
+ 1190  cd nginx
+ 1191  ls
+ 1192  cd html
+ 1193  ls
+ 1194  vim index.php
+ 1195  sudo service nginx restart
+ 1196  sudo service php-fpm restart
+ 1197  sudo service nginx restart
+ 1198  sudo service php-fpm restart
+ 1199  cd /var/www
+ 1200  ls
+ 1201  cd html
+ 1202  ls
+ 1203  cd ..
+ 1204  ls
+ 1205  cd cgi-bin
+ 1206  ls
+ 1207  cd ..
+ 1208  ls
+ 1209  cd html
+ 1210  ls
+ 1211  ls -l
+ 1212  chmod 777 test.php
+ 1213  ls -l
+ 1214  cd /etc
+ 1215  cd nginx
+ 1216  ls
+ 1217  vim fastcgi_params
+ 1218  ls
+ 1219  pwd
+ 1220  ls
+ 1221  cd conf.d
+ 1222  ls
+ 1223  vim default.conf
+ 1224  cd ~
+ 1225  ls
+ 1226  cd ..
+ 1227  pwd
+ 1228  ls
+ 1229  tail /var/log/nginx/error.log
+ 1230  :
+ 1231  cd script
+ 1232  ls
+ 1233  cd scripts
+ 1234  cd /scripts
+ 1235  ls
+ 1236  tail /var/log/nginx/error.log
+ 1237  cd /etc/nginx/html
+ 1238  cd /etc
+ 1239  ls
+ 1240  cd nginx/
+ 1241  ls
+ 1242  cd html
+ 1243  tail /var/log/nginx/error.log
+ 1244  mkdir html
+ 1245  ls
+ 1246  cd html
+ 1247  vim index.php
+ 1248  ls
+ 1249  vim index.php
+ 1250  ls
+ 1251  pwd
+ 1252  cd ..
+ 1253  ls
+ 1254  vim nginx.conf
+ 1255  cd conf.d
+ 1256  ls
+ 1257  vim default.conf
+ 1258  ls
+ 1259  cd ..
+ 1260  ls
+ 1261  cd html
+ 1262  ls
+ 1263  vim index.php
+ 1264  ps aux|grep nginx
+ 1265  ps aux|grep php
+ 1322  history
+ 1323  pwd
+ 1324  history >>history.txt

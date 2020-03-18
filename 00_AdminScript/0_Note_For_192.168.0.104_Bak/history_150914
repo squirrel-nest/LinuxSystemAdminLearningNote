@@ -1,0 +1,1000 @@
+    2  systemctl stop mariadb
+    3  cd /
+    4  cd var/lib/mysql
+    5  ls
+    6  sudo cp -R -p /var/lib/mysql /data/mysql/data
+    7  vim /etc/my.cnf.d/server.cnf
+    8  systemctl start mariadb
+    9  vim /etc/my.cnf.d/server.cnf
+   10  systemctl start mariadb
+   11  man chcon
+   12  ls -laZ
+   13  systemctl start mariadb
+   14  systemctl stop mariadb
+   15  ls
+   16  cd /
+   17  ls
+   18  cd etc
+   19  ls
+   20  vim my.cnf
+   21  systemctl start mariadb
+   22  vim my.cnf
+   23  systemctl stop mariadb
+   24  systemctl start mariadb
+   25  systemctl stop mariadb
+   26  vim my.cnf
+   27  systemctl stop mariadb
+   28  systemctl start mariadb
+   29  firewall-cmd --list-all
+   30  firewall-cmd --add-port=3306/tcp
+   31  firewall-cmd --permanent --add-port=3306/tcp
+   32  pwd
+   33  cd /
+   34  cd installs/
+   35  ls
+   36  mkdir oracle
+   37  ls
+   38  pwd
+   39  cd oracle/
+   40  pwd
+   41  mkdir database
+   42  pwd
+   43  ls
+   44  cd database/
+   45  ls
+   46  pwd
+   47  mkdir oracle
+   48  ls
+   49  cd oracle/
+   50  pwd
+   51  cd /
+   52  ls
+   53  cd installs
+   54  ls
+   55  cd oracle
+   56  ls
+   57  cd database/
+   58  ls
+   59  cd oracle/
+   60  ls
+   61  mkdir 12
+   62  cd 12
+   63  ls
+   64  ftp 192.168.0.9
+   65  ls
+   66  cd /var/lib/mysql
+   67  ls
+   68  cd ..
+   69  cd /
+   70  cd etc
+   71  ls
+   72  vim my.cnf
+   73  systemctl status mariadb
+   74  mysql -u root -p
+   75  ls
+   76  cd home
+   77  cd /home
+   78  cd ftptest
+   79  ls
+   80  ls data_bak.zip -l
+   81  cd /installs/oracle/
+   82  ls
+   83  cd database/
+   84  ls
+   85  cd oracle/
+   86  ls
+   87  cd 12
+   88  ls
+   89  ls -l
+   90  ls
+   91  cd /installs/oracle/
+   92  ls -l
+   93  cd database/
+   94  cd 12
+   95  ls
+   96  cd oracle/
+   97  ls
+   98  cd 12
+   99  ls
+  100  unzip  *
+  101  ls
+  102  unzip linuxamd64_12102_database_1of2.zip 
+  103  unzip linuxamd64_12102_database_2of2.zip 
+  104  ls
+  105  cd database/
+  106  ls
+  107  runInstaller
+  108  cd install
+  109  ls
+  110  ./runInstaller.sh 
+  111  ls
+  112  “cat /etc/redhat-release”
+  113  cat /etc/redhat-release
+  114  lsb_release -id
+  115  uname -r
+  116  “rpm -q binutils compat-libstdc++ gcc glibc libaio libgcc libstdc++ make sysstat unixodbc”
+  117  摘录来自: Corporation，Oracle. “Oracle® Database Quick Installation Guide for Linux x86-64, 12c Release 1 (12.1).” Oracle Corporation, 2014-10-09T06:14:48Z.
+  118  rpm -q binutils compat-libstdc++ gcc glibc libaio libgcc libstdc++ make sysstat unixodbc
+  119  yum install   compat-libstdc++
+  120  yum -ivh  compat-libstdc++
+  121  yum install  compat-libstdc++
+  122  more /etc/oraInst.loc
+  123  “/usr/sbin/groupadd oinstall”
+  124  /usr/sbin/groupadd oinstall
+  125  /usr/sbin/groupadd dba
+  126  “/usr/sbin/useradd -g oinstall -G dba oracle”
+  127  /usr/sbin/groupadd oinstall
+  128  /usr/sbin/useradd -g oinstall -G dba oracle
+  129  passwd oracle
+  130  “/sbin/sysctl -a | grep sem”
+  131  摘录来自: Corporation，Oracle. “Oracle® Database Quick Installation Guide for Linux x86-64, 12c Release 1 (12.1).” Oracle Corporation, 2014-10-09T06:14:48Z.
+  132  /sbin/sysctl -a | grep sem
+  133  df -k
+  134  df -h /tmp
+  135  df
+  136  yum grouplist
+  137  rpm -qa libx
+  138  rpm -qa libx*
+  139  yum install libx
+  140  “rpm -qa --queryformat "%{NAME}-%{VERSION}-%{RELEASE} (%{ARCH})\n" | grep package_name”
+  141  摘录来自: Corporation，Oracle. “Oracle® Database Installation Guide for Linux, 12c Release 1 (12.1).” Oracle Corporation, 2014-11-07T14:50:00Z.
+  142  rpm -qa --queryformat "%{NAME}-%{VERSION}-%{RELEASE} (%{ARCH})\n" | grep package_name
+  143  rpm -qa --queryformat "%{NAME}-%{VERSION}-%{RELEASE} (%{ARCH})\n"
+  144  yum install cvuqdisk
+  145  rpm -qa libx*
+  146  yum install libx
+  147  “more /etc/fstab |grep "tmpfs”
+  148  摘录来自: Corporation，Oracle. “Oracle® Database Installation Guide for Linux, 12c Release 1 (12.1).” Oracle Corporation, 2014-11-07T14:50:00Z. iBooks. 
+  149  \
+  150  /
+  151  ��
+  152  ;
+  153  “more /etc/fstab |grep "tmpfs”
+  154  ;
+  155  more /etc/fstab |grep tmpfs
+  156  more /etc/fstab |grep tmpf
+  157  df
+  158  “cat /sys/kernel/mm/redhat_transparent_hugepage/enabled”
+  159  cat /sys/kernel/mm/redhat_transparent_hugepage/enabled
+  160  cat /sys/kernel/mm/transparent_hugepage/enabled
+  161  df -h
+  162  ls
+  163  df
+  164  df -h
+  165  fsck -l
+  166  fsck
+  167  fdisk -l
+  168  df
+  169  fdisk -l
+  170  parted /dev/sda
+  171  fdisk -l
+  172  su - root
+  173  cd /etc
+  174  ls hosts
+  175  vim hosts
+  176  grep MemTotal /proc/meminfo
+  177  grep SwapTotal /proc/meminfo
+  178  df -h /tmp
+  179  df -h
+  180  free
+  181  df
+  182  top
+  183  uname -m
+  184  more /etc/oraInst.loc
+  185  grep dba /etc/group
+  186  findmnt
+  187  clear
+  188  findmnt
+  189  lvmdiskscan
+  190  pvs
+  191  pvdisplay
+  192  cd /data
+  193  ls
+  194  mkdir oradata
+  195  ls
+  196  cd /etc
+  197  pvscan
+  198  lvmdiskscan
+  199  vgs
+  200  vgdisplay vg_sysdata
+  201  tail /etc/lvm/cache/.cache
+  202  clear
+  203  vgs
+  204  pvscan
+  205  LVS
+  206  lvs
+  207  man lvchange
+  208  vgs
+  209  lvs
+  210  df
+  211  lvm
+  212  findmnt
+  213  lvscan
+  214  lvdisplay
+  215  df -h
+  216  lvs vg
+  217  lvs 
+  218  lvs vg-kernel
+  219  lvs -a -o +devices
+  220  vgs
+  221  lvs
+  222  lvs --segments
+  223  DF
+  224  ddf
+  225  df
+  226  pvscan
+  227  vgs -P -o +devices
+  228  lvs -a -o +devices
+  229  df
+  230  dmsetup ls --tree
+  231  vgscan
+  232  vgdisplay
+  233  lvdisplay
+  234  lvrename /dev/vg-kernel/home /dev/vg02/lv-home
+  235  lvrename /dev/vg-kernel/home /dev/vg-kernel/lv-home
+  236  lvdisplay
+  237  df
+  238  vgs
+  239  fdisk -l
+  240  df
+  241  lvscan
+  242  lvdisplay
+  243  findmnt
+  244  lvdisplay
+  245  findmnt
+  246  lvscan
+  247  lvdisplay |grep home
+  248  blkid /dev/vg_sysdata/02
+  249  mountpoint /mnt 
+  250  mountpoint /
+  251  mountpoint /boot
+  252  mountpoint /data
+  253  mountpoint /index
+  254  mountpoint /dev
+  255  cd ..
+  256  ls
+  257  mountpoint /etc
+  258  pwd
+  259  cd etc
+  260  mountpoint /
+  261  mount
+  262  findmnt
+  263  cd /installs/
+  264  ls
+  265  cd oracle/
+  266  ls
+  267  cd database/
+  268  ls
+  269  cd oracle/
+  270  ls
+  271  cd 12
+  272  ls
+  273  cd database/
+  274  ls
+  275  ./runInstaller 
+  276  su - oracle
+  277  exit
+  278  su - oracle
+  279  exit
+  280  pwd
+  281  su - oracle
+  282  exit
+  283  parted
+  284  parted /dev/sda
+  285  cat
+  286  cat /proc/partitions
+  287  cat /etc/fstab
+  288  blkid -o list
+  289  clear
+  290  blkid -o list
+  291  clear
+  292  blkid -o list
+  293  parted /dev/sda
+  294  df
+  295  lvm help
+  296  ssm list
+  297  cat /dev/mapper/name
+  298  lsmcli
+  299  pvscand
+  300  pvscan
+  301  mountpoint /usr
+  302  mountpoint
+  303  df -h
+  304  cd /
+  305  ls
+  306  mkdir -p /usr/app/oracle
+  307  cd /usr
+  308  cd app
+  309  ls
+  310  cd ..
+  311  pwd
+  312  ls
+  313  cd app
+  314  ls
+  315  cd oracle
+  316  cd local
+  317  ls
+  318  cd ..
+  319  ls
+  320  cd ..
+  321  ls
+  322  cd local
+  323  ls
+  324  cd /
+  325  cd usr
+  326  ls
+  327  cd ..
+  328  mountpoint
+  329  mountpoint /usr
+  330  chown -R oracle:oinstall /usr/app/oracle
+  331  cd usr
+  332  cd app
+  333  ls -l
+  334  cd oracle
+  335  ls
+  336  cd ..
+  337  pwd
+  338  cd ..
+  339  chmod -R 775 /usr/app/oracle
+  340  pwd
+  341  cd app
+  342  ls -l
+  343  yum install oracle-rdbms-server-12cR1-preinstall
+  344  ls
+  345  rpm -qa | grep ssh
+  346  grep MemTotal /proc/meminfo
+  347  grep SwapTotal /proc/meminfo
+  348  df -h /tmp
+  349  df -h
+  350  free
+  351  uname -m
+  352  cd /tmp
+  353  ls
+  354  ls -l
+  355  systemctl status mariadb
+  356  systemctl stop mariadb
+  357  grep MemTotal /proc/meminfo
+  358  free
+  359  yum install pam
+  360  yum update pam
+  361  cat /etc/oracle-release
+  362  cat /etc/redhat-release
+  363  cat /etc/SuSE-release
+  364  lsb_release -id
+  365  uname -r
+  366  rpm -qi cvuqdisk
+  367  more /etc/fstab |grep "tmpfs"
+  368  more /etc/fstab |grep tmpfs
+  369  more /etc/fstab |grep /tmpfs
+  370  more /etc/fstab
+  371  vim /etc/fstab
+  372  cat   /etc/centos-release
+  373  ip a   | grep inet
+  374  /usr/sbin/groupadd -g 501 oinstall
+  375  /usr/sbin/groupadd -g 502 dba
+  376  /usr/sbin/groupadd -g 503 oper
+  377  /usr/sbin/useradd -u 501 -g oinstall -G dba,oper
+  378  /usr/sbin/useradd -u 5
+  379  vim /etc/sysctl.conf
+  380  /sbin/sysctl -p
+  381  vim /etc/security/limits.conf
+  382  vim .bash_profile
+  383  cd /home
+  384  cd oracle
+  385  vim .bash_profile
+  386  df -h /tmp
+  387  cd /tmp
+  388  ls
+  389  pwd
+  390  ls
+  391  cd ..
+  392  ls
+  393  ls -l
+  394  SELINUX
+  395  vim /etc/selinux/config
+  396  semanage login –l
+  397  sestatus
+  398  ls -lZ test.txt
+  399  ls -lZ
+  400  vim /etc/hosts
+  401  ping localhost
+  402  vim /etc/hosts
+  403  pwd
+  404  cd etc
+  405  ls
+  406  cp hosts hosts.org
+  407  ls
+  408  vim hosts
+  409  ping dev.kernel.longzhi.com
+  410  man hostnamectl
+  411  ls
+  412  vim hostname
+  413  man hostnamectl
+  414  vim machine-id
+  415  man hostnamectl
+  416  echo $SHELL
+  417  su - oracle
+  418  yum install gdm
+  419  cd /etc
+  420  cd X11
+  421  ls
+  422  cd xorg.conf.d
+  423  ls
+  424  cd ..
+  425  xhost
+  426  echo $DISPLAY
+  427  export DISPLAY=192.168.0.5:0.0
+  428  xhost + 192.168.0.5
+  429  yum install xhost
+  430  echo $DISPLAY
+  431  xdpyinfo
+  432  /usr/X11R6/bin/xdpyinfo
+  433  ls X11
+  434  systemctl status
+  435  systemctl list
+  436  systemctl --help
+  437  systemctl list-units
+  438  clear
+  439  top
+  440  ps ax
+  441  free
+  442  free -m
+  443  systemctl status gdm
+  444  X :1 -query localhost
+  445  yum install gdm
+  446  yum install xterm
+  447  yum groupinstall "Development Tools"
+  448  yum update
+  449  yum update NetworkManager
+  450  yum update
+  451  yum update 
+  452  yum update |grep rpm
+  453  yum update
+  454  yum update nss*
+  455  yum update rpm
+  456  yum update nss
+  457  yum update
+  458  yum update kernel
+  459  yum update socat
+  460  yum update  kernel-headers
+  461  yum update kernel-tools
+  462  yum update kernel-tools-libs
+  463  yum update  selinux-policy
+  464  yum update  systemd
+  465  yum update
+  466  yum update bind-libs-lite
+  467  yum update bind-license
+  468  yum update gnutls
+  469  ls
+  470  cd yum.repos.d
+  471  ls
+  472  mv MariaDB-Enterprise.repo MariaDB-Enterprise.repo.bak
+  473  cd ..
+  474  yum update
+  475  echo $DISPLAY
+  476  yum install xhost
+  477  yum install xterm
+  478  yum list xhost
+  479  yum search xhost
+  480  yum install xhost
+  481  yum install xterm
+  482  clear
+  483  ls -a /tmp
+  484  yum install xterm
+  485  xterm &
+  486  xhost + 192.168.0.5
+  487  cd /usr
+  488  ls
+  489  cd share
+  490  ls
+  491  cd ..
+  492  ls
+  493  cd lib
+  494  ls
+  495  cd ..
+  496  ls
+  497  cd lib64/
+  498  ls
+  499  cd ..
+  500  ls
+  501  cd lib64/
+  502  ls
+  503  cd X11
+  504  ls
+  505  cd ..
+  506  pwd
+  507  cd ..
+  508  ls
+  509  yum install xhost
+  510  xhost + 192.168.0.5
+  511  ps -ef xterm
+  512  ps -ef |grep xterm
+  513  xterm &
+  514  yum install gdm
+  515  yum groupinstall "GNOME Desktop"
+  516  yum install gdm
+  517  xterm
+  518  xclock 
+  519  pwd
+  520  cd usr
+  521  cd bin
+  522  xdpyinfo
+  523  cd ..
+  524  yum install xorg-x11-utils 
+  525  ls
+  526  cd sbin
+  527  ls
+  528  cd ..
+  529  cd bin
+  530  ls
+  531  xdpyinfo
+  532  xxlock
+  533  yum install xorg-x11-xauth
+  534  ls
+  535  cd ..
+  536  ls
+  537  echo $DISPLAY
+  538  xterm
+  539  rpm -qf /usr/bin/xdpyinfo
+  540  /usr/bin/xdpyinfo
+  541  xclock
+  542  yum install xorg-x11-apps
+  543  xclock
+  544  xterm &
+  545  ps -ef |grep xterm
+  546  cd /oracle
+  547  cd /installs/oracle/database/oracle/12/database/
+  548  ls
+  549  vim runInstaller 
+  550  cd install
+  551  ls
+  552  vim runInstaller.sh 
+  553  cd resource
+  554  ls
+  555  cd ..
+  556  ls
+  557  vim detachHome.sh 
+  558  cd ..
+  559  ls
+  560  cd response/
+  561  ls
+  562  cd ..
+  563  pwd
+  564  yum install docker
+  565  xhost +
+  566  su - oracle
+  567  xdpyinfo
+  568  su - oracle
+  569  yum install make
+  570  yum install                                            | 3.4 kB     00:00
+  571  yum install gcc
+  572  yum install gcc-c++
+  573  yum install binutils
+  574  yum install glibc
+  575  rpm -q --qf '%{NAME}-%{VERSION}-%{RELEASE}(%{ARCH})\n' binutils gcc gcc-c++ glibc glibc-common glibc-devel glibc-headers ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXext libXtst libX11 libXau libXi make sysstat unixODBC unixODBC-devel zlib-devel compat-libcap1 compat-libstdc++-33
+  576  yum install ksh
+  577  yum install libaio
+  578  yum install libaio-devel
+  579  yum install libgcc
+  580  yum install libstdc++
+  581  yum install libstdc++-devel
+  582  rpm -q --qf '%{NAME}-%{VERSION}-%{RELEASE}(%{ARCH})\n' binutils gcc gcc-c++ glibc glibc-common glibc-devel glibc-headers ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXext libXtst libX11 libXau libXi make sysstat unixODBC unixODBC-devel zlib-devel compat-libcap1 compat-libstdc++-33
+  583  yum install libXext
+  584  yum install libXtst
+  585  yum install libX11
+  586  yum install libXau
+  587  yum install libxcb
+  588  yum install libXi
+  589  yum install sysstat
+  590  yum install compat-libcap1
+  591  yum install compat-libstdc++
+  592  yum install compat-libstdc++-33
+  593  yum install zlib-devel
+  594  yum install unixODBC
+  595  yum install unixODBC-devel
+  596  su - oracle
+  597  pwd
+  598  su - oracle
+  599  su - root
+  600  ls
+  601  cd /usr
+  602  cd app
+  603  ls
+  604  cd oracle
+  605  ls
+  606  envo
+  607  alias envo cdob cdoh tns
+  608  su - oracle
+  609  ls
+  610  top
+  611  su - oracle
+  612  systemctl start docker
+  613  top
+  614  sudo docker images
+  615  nslookup mycluster-scan
+  616  systemctl stop docker
+  617  su - oracle
+  618  cat  /etc/fstab
+  619  free -g
+  620  cd /usr
+  621  ls
+  622  ls -l
+  623  cd app
+  624  ls
+  625  ls -l
+  626  cd ..
+  627  chown oracle:oinstall -R app
+  628  ls -l
+  629  cd /
+  630  cd data
+  631  ls
+  632  cd oradata
+  633  ls
+  634  pwd
+  635  cd ..
+  636  ls -l
+  637  chown oracle:oinstall -R oradata
+  638  /usr/sbin/groupadd -g 503 oper
+  639  /usr/sbin/useradd -u 501 -g oinstall -G oper
+  640  /usr/sbin/useradd -u 501 -g oinstall -G oper oracle
+  641  /usr/sbin/usermo -u 501 -g oinstall -G oper oracle
+  642  group
+  643  who
+  644  usermod oracle
+  645  usermod oracle --groups
+  646  usermod oracle -G
+  647  cut -d: -f1 /etc/passwd
+  648  id oracle
+  649  /usr/sbin/groupadd -g 503 oper
+  650  /usr/sbin/usermod -G oper oracle
+  651  id oracle
+  652  /usr/sbin/usermod -G dba,oper oracle
+  653  id oracle
+  654  id oper
+  655  cd /usr
+  656  cd app
+  657  cd oraI
+  658  ls
+  659  cd oraInventory/
+  660  ls
+  661  ./orainstRoot.sh
+  662  cd /
+  663  ls
+  664  pwd
+  665  cd usr/app/oracle/product/12.1.0/dbhome_1/
+  666  ls
+  667  ./root.sh
+  668  top
+  669  firewall-cmd --list-all
+  670  firewall-cmd --add-port=5500/tcp
+  671  firewall-cmd --add-port=1521/tcp
+  672  top
+  673  lsnrctl status
+  674  su - oracle
+  675  ls
+  676  cd /usr
+  677  cd app
+  678  ls
+  679  cd oracle
+  680  ls
+  681  cd product
+  682  ls
+  683  cd 12.1.0/
+  684  ls
+  685  cd dbhome_1/
+  686  ls
+  687  cd bin
+  688  ls
+  689  ls st*
+  690  ls srvc*
+  691  srvctl -help
+  692  srvctl --help
+  693  srvctl
+  694  ls srvctl
+  695  srvctl
+  696  vim srvctl
+  697  lsnrctl status lzsdh
+  698  su - oracle
+  699  exit
+  700  cd app
+  701  cd /usr/
+  702  ls
+  703  cd app
+  704  ls
+  705  cd oracle
+  706  ls
+  707  cd product/
+  708  ls
+  709  cd 12.1.0
+  710  ls
+  711  cd dbhome_1/
+  712  ls
+  713  cd dbs
+  714  ls
+  715  ps -ef |grep srvctl
+  716  ps -ef |grep ora
+  717  exit
+  718  .oraenv
+  719  ./oraenv
+  720  su - oracle
+  721  exit
+  722  pwd
+  723  cd /
+  724  cd usr
+  725  ls
+  726  systemctl status mariaDb
+  727  systemctl status mysql
+  728  systemctl status mysqld
+  729  systemctl status mariadb
+  730  systemctl start mariadb
+  731  top
+  732  cd /
+  733  ls
+  734  cd installs/
+  735  ls
+  736  cd apache/
+  737  ls
+  738  cd tomcat/
+  739  ls
+  740  cd apache-tomcat-8.0.14
+  741  ls
+  742  cd webapps/
+  743  ls
+  744  cd ..
+  745  ls
+  746  cd ..
+  747  ls
+  748  cd ..
+  749  ls
+  750  cd redhat/
+  751  ls
+  752  cd wildfly/
+  753  ls
+  754  cd wildfly-9.0.0.Alpha1
+  755  ls
+  756  cd standalone/
+  757  ls
+  758  cd deployments/
+  759  ls
+  760  cd ..
+  761  ls
+  762  cd ..
+  763  才对。。
+  764  cd ..
+  765  ls
+  766  cd apache/
+  767  ls
+  768  cd tomcat/
+  769  ls
+  770  wget http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.15/bin/apache-tomcat-8.0.15.tar.gz
+  771  ls
+  772  rm apache-tomcat-8.0.14.tar.gz 
+  773  ls
+  774  tar -zxvf apache-tomcat-8.0.15.tar.gz
+  775  ls
+  776  exit
+  777  ls
+  778  cd /
+  779  ls
+  780  pwd\
+  781  pwd
+  782  ls
+  783  shutdown -P now
+  784  ls
+  785  cd /
+  786  pwd
+  787  uname
+  788  ls
+  789  cd usr
+  790  ls
+  791  cd local
+  792  ls
+  793  cd lib
+  794  ls
+  795  cd lib64
+  796  cd ..
+  797  ls
+  798  cd lib64
+  799  ls
+  800  cd ..
+  801  cd webapps
+  802  ls
+  803  cd javaweb
+  804  ls
+  805  cd /
+  806  ls
+  807  nmcli device show
+  808  cd /etc/ssh
+  809  ls
+  810  vim sshd_config 
+  811  ls
+  812  cd /
+  813  ls
+  814  yumupdate
+  815  yum update
+  816  yum upgrade
+  817  echo $PATH
+  818  exit
+  819  echo $PATH
+  820  java -version
+  821  shutdown -P now
+  822  cd /usr
+  823  cd lib
+  824  ls
+  825  cd jvm
+  826  ls
+  827  wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz"
+  828  ls
+  829  tar -zxvf jdk-8u60-linux-x64.tar.gz
+  830  ls
+  831  alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_60/bin/java 2
+  832  alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.8.0_60/bin/jar 2
+  833  alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_60/bin/javac 2
+  834  java version
+  835  java -version
+  836  alternatives --config java
+  837  java -version
+  838  vi + /etc/profile
+  839  source /etc/profile
+  840  echo $PATH
+  841  vi + /etc/profile
+  842  echo $PATH
+  843  nmcli dev wifi list
+  844  ls
+  845  cd /usr
+  846  ls
+  847  cd bin
+  848  ls
+  849  cd ..
+  850  ls
+  851  cd libexec
+  852  ls
+  853  cd ..
+  854  ls
+  855  cd lib
+  856  ls
+  857  cd jvm
+  858  ls
+  859  ifconfig
+  860  cd /etc/sysconfig
+  861  ls
+  862  cd network-scripts/
+  863  ls
+  864  vim ifcfg-wlan0
+  865  ls
+  866  vim ifcfg-TP-LINK_HOME
+  867  ifconfig
+  868  nmcli device status
+  869  ls
+  870  vim ifcfg-TP-LINK_HOME
+  871  ls
+  872  vim ifcfg-wlan0
+  873  ls
+  874  vim ifcfg-TP-LINK_HOME
+  875  ficfg
+  876  ifcfg
+  877  ifcfg DEV
+  878  nmcli device show
+  879  nmcli device status
+  880  ls
+  881  pwd
+  882  LS
+  883  ls
+  884  cd /
+  885  pwd
+  886  localctl status
+  887  nmcli device status
+  888  nmcli device show
+  889  clear
+  890  history
+  891  lsclear
+  892  clear
+  893  ls
+  894  pwd
+  895  ls
+  896  cd etc
+  897  ls
+  898  vim yum.conf
+  899  imv yum.repos.d/
+  900  imv yum.repos.d
+  901  vim yum.repos.d
+  902  ls
+  903  cd ..
+  904  ls
+  905  cd installs
+  906  ls
+  907  cd redhat
+  908  ls
+  909  cd wildfly
+  910  ls
+  911  wget http://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.tar.gz
+  912  ls
+  913  wget http://download.jboss.org/wildfly/10.0.0.Beta2/wildfly-10.0.0.Beta2.tar.gz
+  914  wget http://download.jboss.org/wildfly/10.0.0.Beta2/servlet/wildfly-servlet-10.0.0.Beta2.tar.gz
+  915  ls
+  916  cd ..
+  917  ls
+  918  cd apache
+  919  ls
+  920  cd tomcat
+  921  ls
+  922  wget http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.26/bin/apache-tomcat-8.0.26-fulldocs.tar.gz
+  923  ls
+  924  yum repolist -v
+  925  ls
+  926  cd/
+  927  cd 
+  928  cd /
+  929  ls
+  930  top
+  931  ps -ef
+  932  cd installs
+  933  ls
+  934  cd redhat/
+  935  ls
+  936  cd wildfly/
+  937  ls
+  938  history
+  939  tar -zxvf jdk-8u60-linux-x64.tar.gz
+  940  tar -zxvf wildfly-9.0.1.Final.tar.gz
+  941  ls
+  942  man rm
+  943  rm -f wildfly-9.0.0.Alpha1.tar.gz 
+  944  ls
+  945  rm -f wildfly-8.2.0.Final.tar.gz 
+  946  ls
+  947  hisTory
+  948  history
+  949  “yum history list all”
+  950  摘录来自: Hradílek，Jaromír. “System Administrator's Guide.” iBooks. 
+  951  yum history list all
+  952  ls
+  953  ip
+  954  id
+  955  uname
+  956  version
+  957  uname -version
+  958  uname -a
+  959  ls
+  960  uname -cpu
+  961  cpu
+  962  uname -m
+  963  uname -r
+  964  uname -s
+  965  uname -v
+  966  uname -p
+  967  uname -i
+  968  uname -o
+  969  uname -help
+  970  uname -h
+  971  uname --h
+  972  uname --hardware-platform
+  973  uname --help
+  974  uname  --kernel-name
+  975  uname --processor
+  976  yum check-update
+  977  TOP
+  978  top
+  979  ps -ef
+  980  ps -ef |grep wildfly
+  981  service crond status
+  982  cat /proc/version
+  983  cd /proc
+  984  ls
+  985  cd ..
+  986  uname -a
+  987  lsb_release -a
+  988  ls
+  989  service network status
+  990  ifconfig
+  991  ipaddr
+  992  ip
+  993  nmcli device status
+  994  nmcli device show
+  995  history
+  996  history |more
+  997  pwd
+  998  ls
+  999  cd /
+ 1000  ls
+ 1001  history >>history_150914

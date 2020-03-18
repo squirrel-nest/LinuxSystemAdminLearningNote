@@ -1,0 +1,5 @@
+1.启动盘
+2.安装后 grub-install
+
+3.gpt方式
+rescue选项即可，更改启动盘位置为sda即可

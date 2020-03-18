@@ -1,0 +1,12 @@
+
+google search centos 无人值守安装
+google search pxelinux centos 7
+
+CentOS 7下PXE Kickstart无人值守安装操作系统
+http://www.itdadao.com/articles/c15a349404p0.html
+
+KICKSTART无人值守安装
+http://www.zyops.com/autoinstall-kickstart
+
+https://linux.cn/article-4902-1.html
+RHEL/CentOS 7 中配置 PXE 网络启动服务器

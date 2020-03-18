@@ -1,0 +1,28 @@
+useradd -g ftp -s /sbin/nologin ftptest
+
+设置ftptest用户密码：输入：passwd ftptest
+
+passwd ftptest123
+
+
+useradd -g users -s /sbin/login zfengzhou
+passwd zfengzhou
+
+useradd -g users -s /sbin/login wangyu
+passwd wangyu123
+
+useradd -g users -s /sbin/login lzhiyun
+passwd lzhiyun123
+
+useradd -g users -s /sbin/login sdawei
+passwd sdawei123
+
+--==================================
+http://www.2daygeek.com/how-to-delete-the-user-account-in-linux-server/
+彻底删除 用户
+rm /var/spool/mail/oldusername
+rm -rf /home/oldusername
+
+
+linux下的用户、组、权限管理
+http://boyun.sh.cn/bio/?p=71

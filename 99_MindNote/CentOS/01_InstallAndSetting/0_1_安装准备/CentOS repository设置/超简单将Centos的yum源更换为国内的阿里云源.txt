@@ -1,0 +1,4 @@
+超简单将Centos的yum源更换为国内的阿里云源
+http://blog.csdn.net/chavo0/article/details/51939362
+
+http://mirrors.aliyun.com/help/centos?spm=5176.bbsr150321.0.0.d6ykiD

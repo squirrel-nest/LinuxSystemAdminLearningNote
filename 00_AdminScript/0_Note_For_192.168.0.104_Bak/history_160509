@@ -1,0 +1,1000 @@
+    7  ls
+    8  cd ..
+    9  ls
+   10  cd user
+   11  ls
+   12  cd ..
+   13  sudo systemctl start mariadb
+   14  cd /etc/rc/init.d
+   15  ls
+   16  cd /etcv
+   17  cd /etc
+   18  cd rc.d
+   19  cd init.d
+   20  ls
+   21  vim mysql
+   22  systemctl start mysqld
+   23  ps -ef |grep mysql
+   24  systemctl start mysqldsystemctl start mysqld
+   25  vim mysql
+   26  systemctl stop mysqld
+   27  ps -ef |grep mysql
+   28  systemctl start mysql
+   29  ps -ef |grep mysql
+   30  mysql -u root -p
+   31  ss -tunlp
+   32  ss -tunlp |grep mysql
+   33   systemctl start mariadb
+   34   systemctl status mariadb
+   35   systemctl status mariadb -l
+   36  ls
+   37  pwd
+   38  cd ..
+   39  cd init.d
+   40  ls
+   41  cd ..
+   42  ls -ll
+   43  cd init.d
+   44  pwd
+   45  ls
+   46  vim mariadb 
+   47  vim mysqld_multi 
+   48  vim mariadb 
+   49  vim mariadb
+   50  ls
+   51  cd /
+   52  cd usr
+   53  cd local/
+   54  ls
+   55  cd mariadb
+   56  ls
+   57  cd ..
+   58  ls -ll
+   59  cd /data
+   60  ls
+   61  ls -lZ
+   62  cd /usr/local/
+   63  ls -lZ
+   64  chown -R mysql:mysql mariadb
+   65  ls -lZ
+   66  cd mariadb
+   67  ls
+   68  vim my.cnf
+   69  pwd
+   70  vim my.cnf
+   71  cd /etc/init.d
+   72  ls
+   73  vim mariadb
+   74  systemctl start mariadb
+   75  ls
+   76  ls -lZ
+   77  cd ..
+   78  ls
+   79  cd data
+   80  ls
+   81  ls -lZ
+   82  cd /usr/local/
+   83  ls
+   84  ls -lZ
+   85  cd mariadb
+   86  ls
+   87  cd bin
+   88  ls
+   89  cd ..
+   90  ls
+   91  ls -l
+   92  cd mariadb
+   93  ls
+   94  vim my.cnf
+   95  pwd
+   96  ls
+   97  pwd
+   98  scripts/mysql_install_db --defaults-file=/usr/local/mariadb/my.cnf
+   99  ls /data/mariadb
+  100  ls /data/mariadb/data
+  101  pwd
+  102  ls
+  103  vim my.cnf
+  104  cd /home
+  105  ls
+  106  ls -lZ
+  107  cd mariadb
+  108  ls
+  109  ls -lZ
+  110  cd ..
+  111  ls
+  112  rm mariadb -r -f
+  113  ls
+  114  cd /data
+  115  ls
+  116  ls -lZ
+  117  systemctl start mariadb
+  118  cd /etc/init.d
+  119  ls
+  120  vim mariadb
+  121  systemctl daemon-reload
+  122  systemctl start mariadb
+  123  ps -ef |grep mysql
+  124  systemctl status mariadb
+  125  systemctl status mariadb -l
+  126  exit
+  127  ifdown wlp0s29f7u4
+  128  ifup wlp0s29f7u4
+  129  ping 192.168.1.1
+  130  ps -ef |grep mysql
+  131  systemctl stop mariadb
+  132  ps -ef |grep mysql
+  133  systemctl status mariadb -l
+  134  systemctl restart
+  135  systemctl reboot
+  136  cd /tmp
+  137  ls
+  138  ls -l
+  139  cd ..
+  140  ls
+  141  pwd
+  142  cd data
+  143  ls
+  144  CD //
+  145  cd /
+  146  ls
+  147  vim history_150914 
+  148  vim history_141207 
+  149  cd /usr/local/
+  150  ls
+  151  tar -zxvf mariadb-10.1.7-linux-x86_64.tar.gz
+  152  ln -s mariadb-10.1.7-linux-x86_64 mariadb
+  153  ls
+  154  groupadd --system mariadb
+  155  useradd -c "MariaDB Server" -d /usr/local/mysql -g mariadb --system mariadb
+  156  chown -R mariadb:mariadb mariadb
+  157  ls -lZ
+  158  cd maria
+  159  cd mariadb
+  160  ls
+  161  yun -qa jemall*
+  162  yum -qa jemall*
+  163  yum -q jemall*
+  164  rmp -qa |grep jemall
+  165  rpm -qa |grep jemall
+  166  ls
+  167  cd support-files/
+  168  ls
+  169  cp my-medium.cnf ../my.cnf
+  170  cd ..
+  171  ls
+  172  vim my.cnf
+  173  ls ../mysql
+  174  vim ../mysql/my-multi.cnf
+  175  cd support-files/
+  176  ls
+  177  cd ..
+  178  ls
+  179  vim my.cnf
+  180  ls
+  181  cd support-files/
+  182  ls
+  183  cd ..
+  184  cp ./support-files/mysql.server /etc/init.d/mariadb
+  185  chmod +x /etc/init.d/mariadb
+  186  pwd
+  187  ls
+  188  cd bin
+  189  ls
+  190  cp mysqld_safe mysqld_safe_org
+  191  pwd
+  192  systemctl start mariadb.service
+  193  systemctl status mariadb.service -l
+  194  journalctl -xn
+  195  systemctl status mysql
+  196  systemctl stop mysql
+  197  systemctl start mariadb
+  198  journalctl -xn
+  199  systemctl stop mariadb
+  200  systemctl start mariadb
+  201  /etc/init.d/mariadb start
+  202  cd ..
+  203  ls
+  204  vim my.cnf
+  205  ps -ef |grep mysql
+  206  ss -tunlp
+  207  ss -tunlp |grep mysql
+  208  system status mysql
+  209  systemctl status mysql
+  210  systemctl stop mysql
+  211  system status mysql
+  212  systemctl status mysql
+  213  ps -ef |grep mysql
+  214  systemctl reboot
+  215  /etc/init.d/mariadb start
+  216  /etc/init.d/mariadb stop
+  217  systemctl status mariadb
+  218  systemctl stop mariadb
+  219  cd /usr
+  220  ls
+  221  cd local
+  222  ls
+  223  cd mysql
+  224  ls
+  225  ls -lZ
+  226  cd ..
+  227  cd mariadb
+  228  ls
+  229  cd support-files/
+  230  ls
+  231  mysqld_multi.server example
+  232  ./mysqld_multi.server example
+  233  mysqld_multi --example
+  234  cd ..
+  235  pwd
+  236  ls
+  237  cd ..
+  238  pwd
+  239  ls
+  240  cd mysql
+  241  ls
+  242  cp my-multi.cnf ../mariadb/
+  243  ls
+  244  cd ..
+  245  ls
+  246  cd mariadb
+  247  ls
+  248  vim my-multi.cnf 
+  249  vim my.cnf
+  250  systemctl stop mariadb
+  251  systemctl start mariadb
+  252  journalctl -xn
+  253  systemctl status mariadb.service
+  254  systemctl status mariadb.service -l
+  255  ls
+  256  vim my.cnf
+  257  ./scripts/mysql_install_db  --force --defaults-file=/usr/local/mariadb/my.cnf
+  258  vim my.cnf
+  259  ./scripts/mysql_install_db  --force --defaults-file=/usr/local/mariadb/my.cnf
+  260  /etc/init.d/mariadb start
+  261  rm -f  /etc/init.d/mariadb
+  262  ls support-files/
+  263  cd support-files/
+  264  vim mysql.server 
+  265  cd /usr/local/mariadb
+  266  ls
+  267  vim my-multi.cnf 
+  268  vim my.cnf
+  269  ps -ef |grep mysql
+  270  systemctl status mariadb
+  271  pwd
+  272  ls
+  273  vim my-multi.cnf 
+  274  vim my.cnf 
+  275  ls
+  276  cd /data
+  277  ls
+  278  ls -lZ
+  279  chcon -R -t mysqld_db_t /data/mariadb_tb
+  280  ls
+  281  ls -lZ
+  282  cd ..
+  283  cd /tmp
+  284  ls -lZ
+  285  lss
+  286  s
+  287  ls
+  288  pwd
+  289  ps -ef |grep
+  290  ps -ef |grep mysql
+  291  ss -tunlp
+  292  ss -tunlp |grep mysql
+  293  systemctl mysql stop
+  294  systemctl stop mysql
+  295  ss -tunlp |grep mysql
+  296  systemctl stop mysqld
+  297  ss -tunlp |grep my
+  298  systemctl stop mariadb
+  299  ss -tunlp |grep mysql
+  300  systemctl stop mysql
+  301  ss -tunlp |grep mysql
+  302  systemctl stop mysqld
+  303  cd var
+  304  cd /var
+  305  cd lib
+  306  ls
+  307  cd systemd
+  308  ls
+  309  cd ..
+  310  ls
+  311  cd ..
+  312  ls
+  313  rpm -q mariadb-server
+  314  getenforce
+  315  systemctl status mariadb. service
+  316  systemctl status mariadb.service
+  317  vim /etc/rc.d/init.d/mariadb
+  318  systemctl start mariadb.service
+  319  vim /etc/rc.d/init.d/mariadb
+  320  systemctl start mariadb.service
+  321  systemctl daemon-reload
+  322  systemctl start mariadb.service
+  323  systemctl status mariadb.service -l
+  324  journalctl -xn
+  325  ls
+  326  cd /usr/lib/systemd/system
+  327  ls
+  328  ls ma*
+  329  ps -eZ | grep mysqld
+  330  ls -lZ /usr/libexec/mysqld
+  331  ls -lZ /usr/libexec
+  332  ls -lZ /usr/sbin
+  333  ls -lZ /usr/sbin/mysqld
+  334  getsebool -a
+  335  getsebool -a |grep mysql
+  336  l s -lZ /var/data/
+  337  l s -lZ /data/
+  338  ls -lZ /data/
+  339  ls -lZ /data/mariadb_tb
+  340  ls -lZ /data/mariadb_tb/data/
+  341  ls -lZ /data/mariadb_tb/data
+  342  mysql show -u root -p
+  343  mysqlshow -u root -p
+  344  ss -tunlp |grep mysql
+  345  systemctl stop mariadb.service
+  346  systemctl stop mariadb
+  347  ss -tunlp |grep mysql
+  348  mkdir --help
+  349  ls /data
+  350  ls /data  -l
+  351  chown -R mysql:mysql /data/mariadb_tb
+  352  ls /data  -l
+  353  systemctl start mariadb
+  354  ls -lZ /data
+  355  systemctl reboot
+  356  clear
+  357  cd /usr/local
+  358  ls
+  359  cd mariadb
+  360  ls
+  361  vim my.cnf
+  362  rm .my.cnf.swp
+  363  ls
+  364  vim my.cnf
+  365  cd support-files/
+  366  ls
+  367  vim mysql.server 
+  368  cp mysql.server /etc/init.d/mariadb
+  369  chmod +x /etc/init.d/mariadb
+  370  vim /etc/init.d/mariadb 
+  371  cd ..
+  372  cd bin
+  373  ls
+  374  vim mysqld
+  375  vim mysqld_safe
+  376  systemctl start mariadb
+  377  systemctl daemon-reload
+  378  systemctl start mariadb
+  379  systemctl status mariadb
+  380  ss -tunlp
+  381  ss -tunlp |grep mysql
+  382  cd ..
+  383  pwd
+  384  systemctl stop mariadb
+  385  systemctl start mariadb
+  386  ss -tunlp |grep mysql
+  387  systemctl stop mysql
+  388  systemctl stop mysqld
+  389  ss -tunlp |grep mysql
+  390  systemctl stop mysqld.service
+  391  systemctl status mysqld.service
+  392  yum update
+  393  ls
+  394  vim my.cnf
+  395  systemctl stop mariadb
+  396  systemctl start mariadb
+  397  ps -ef |grep mariadb
+  398  ss -tunlp |grep mysql
+  399  systemctl stop mariadb
+  400  ss -tunlp |grep mysql
+  401  systemctl stop mysql
+  402  systemctl stop mysqld
+  403  ss -tunlp |grep mysql
+  404  systemctl stop mysql
+  405  systemctl start mysql
+  406  ps aux |grep mysql
+  407  systemctl stop mysqld
+  408  ss -tunlp |grep mysql
+  409  cd /etc
+  410  ls
+  411  ls my*
+  412  vim my.cnf
+  413  cd my.cnf.d
+  414  ls
+  415  vim server.cnf
+  416  vim my.cnf.rpmnew
+  417  cd ..
+  418  vim my.cnf.rpmnew
+  419  cd init.d
+  420  ls
+  421  vim mysql
+  422  ./mariadb start
+  423  mariadb start
+  424  systemctl start mariadb
+  425  ss -tunlp
+  426  ss -tunlp |grep
+  427  ss -tunlp |grep mysql
+  428  ifdown wlp0s29f7u4
+  429  ifup wlp0s29f7u4
+  430  ping 192.168.1.1
+  431  ifdown wlp0s29f7u4
+  432  ifup wlp0s29f7u4
+  433  cd /data
+  434  ls
+  435  ls -lZ
+  436  cd mariadb_tb/
+  437  ls
+  438  ls -lZ
+  439  ls
+  440  rm data_tb -r -f
+  441  ls
+  442  cd ..
+  443  ls -lZ
+  444  cd /tmp
+  445  ls
+  446  cd /tmp
+  447  ls -lZ
+  448  ss -tunlp
+  449  systemctl status mariadb
+  450  systemctl status mysql
+  451  systemctl stop mysql
+  452  ss -tunlp
+  453  systemctl status mysql[A
+  454  systemctl status mysqld
+  455  ps -ef |grep
+  456  ps -ef |grep mysql
+  457  ls
+  458  systemctl status mysqld
+  459  systemctl status mysql
+  460  ls
+  461  ps axf | grep mysqld
+  462  systemctl status mysql
+  463  systemctl status mysqld
+  464  systemctl status mariadb
+  465  mysqld --print-defaults
+  466  mysqld --help --verbose
+  467  mysqladmin shutdown
+  468  mysqladmin -u root -p shutdown
+  469  systemctl status mysql
+  470  ps axf | grep mysqld
+  471  ps -ef |grep mysql
+  472  systemctl status mariadb
+  473  systemctl start mariadb
+  474  systemctl status mariadb -l
+  475  ps -ef |grep mysql
+  476  cd /var
+  477  cd lib
+  478  ls
+  479  cd mysqld
+  480  cd mysql
+  481  ls
+  482  cd ..
+  483  pwd
+  484  cd ..
+  485  cd data
+  486  ls
+  487  cd /data/
+  488  ls
+  489  cd mariadb
+  490  ls
+  491  cd data
+  492  ls
+  493  rm ib_logfile0
+  494  rm ib_logfile1 
+  495  ls
+  496  cd ..
+  497  ls
+  498  cd mariadb_tb/
+  499  ls
+  500  cd data
+  501  ls
+  502  rm ib_logfile0
+  503  rm ib_logfile1 
+  504  systemctl start mariadb
+  505  ps -ef |grep mysql
+  506  systemctl start mysql
+  507  ps -ef |grep mysql
+  508  ps -ef |grep mysqld
+  509  systemctl start mysqld
+  510  ps -ef |grep mysql
+  511  ss -tunlp
+  512  systemctl stop mysqld
+  513  ss -tunlp
+  514  ss -tunlp |grep mysql
+  515  systemctl stop mysql
+  516  ss -tunlp |grep mysql
+  517  ps -ef |grep mysql
+  518  cd /usr/local/mariadb
+  519  ls
+  520  cd bin
+  521  ls mysqld
+  522  mysqld --print-defaults
+  523  cd ..
+  524  cd /etc
+  525  cd init.d
+  526  ls
+  527  vim mariadb
+  528  cd /usr/local/mariadb
+  529  ls
+  530  vim my.cnf
+  531  cd /etc/init.d
+  532  ls
+  533  vim mariadb 
+  534  systemctl start mariadb
+  535  systemctl daemon-reload
+  536  systemctl start mariadb
+  537  journalctl -xn
+  538  systemctl stop mariadb
+  539  ss -tunlp |grep mysql
+  540  yum update
+  541  systemctl start mysql
+  542  systemctl start mysqld
+  543  ss -tunlp |grep mysql
+  544  systemctl stop mysql
+  545  systemctl stop mysqld
+  546  ss -tunlp |grep mysql
+  547  systemctl stop mariadb
+  548  systemctl start mariadb
+  549  journalctl -xn
+  550  ss -tunlp |grep mysql
+  551  systemctl start mariadb
+  552  systemctl stop mariadb
+  553  systemctl reboot
+  554  ping 192.168.1.1
+  555  ifdown wlp0s29f7u4
+  556  ifup wlp0s29f7u4
+  557  clear
+  558  ls
+  559  pwd
+  560  ss -tunlp |grep mysql
+  561  systemctl start mysqld-multi
+  562  systemctl start mysql-multi
+  563  cd /etc/init.d/
+  564  ls
+  565  systemctl start mysqld_multi
+  566  ss -tunlp |grep mysql
+  567  systemctl stop mysqld_multi
+  568  ss -tunlp |grep mysql
+  569  rm mariadb
+  570  systemctl stop mariadb
+  571  cd /etc
+  572  ls
+  573  vim my.cnf
+  574  ls
+  575  cp /usr/local/mysql/my-multi ./
+  576  cd /usr/local/mysql/my-multi.cnf ./
+  577  cd /usr/local/mysql/my-multi.cnf
+  578  cp /usr/local/mysql/my-multi.cnf ./
+  579  ls
+  580  vim my-multi.cnf 
+  581  cp /usr/local/mariadb/my-multi_mariadb.cnf ./
+  582  cp /usr/local/mariadb/my-multi.cnf ./my-multi_mariadb.cnf 
+  583  vim my-multi_mariadb.cnf 
+  584  exit
+  585  ss -tunlp |grep mysql
+  586  systemctl stop mysql
+  587  ss -tunlp |grep mysql
+  588  systemctl stop mysqld
+  589  ss -tunlp |grep mysql
+  590  systemctl stop mariadb
+  591  systemctl start mariadb
+  592  systemctl status mariadb.service -l
+  593  journalctl -xn
+  594  clear
+  595  journalctl -xn
+  596  ss -tunlp |grep mysql
+  597  systemctl stop mysql
+  598  ss -tunlp |grep mysql
+  599  mysqladmin -u root -p shutdown
+  600  ss -tunlp |grep mysql
+  601  shutdown -P now
+  602  ls
+  603  pwd
+  604  cd /
+  605  cd etc
+  606  ls
+  607  vim my-multi_mariadb.cnf 
+  608  vim my.cnf 
+  609  cd etc
+  610  cd /etc
+  611  ls
+  612  vim my.cnf
+  613  mysqld_multi --example
+  614  ss -tunlp
+  615  ss -tunlp |grep mysql
+  616  systemctl stop mysql
+  617  ss -tunlp |grep mysql
+  618  ss -tunlp |grep mysqld
+  619  systemctl stop mysqld
+  620  ss -tunlp |grep mysqld
+  621  systemctl stop mysql
+  622  ss -tunlp |grep mysqld
+  623  systemctl stop mariadb
+  624  history
+  625   mysqladmin -u root -p shutdown
+  626  ss -tunlp |grep mysqld
+  627  ls -lrt
+  628  cd /usr/local/mariadb
+  629  ls
+  630  cd /usr/share/mysql
+  631  ls
+  632  pwd
+  633  vim mysqld_multi.server 
+  634  pwd
+  635  cd ..
+  636  ls
+  637  cd local/
+  638  ls
+  639  cd mariadb
+  640  ls
+  641  vim my-multi.cnf
+  642  rm my-multi.cnf
+  643  ls
+  644  cp /etc/my-multi_mariadb.cnf ./
+  645  ls
+  646  cd /usr/local/mariadb
+  647  ls
+  648  cd support-files/
+  649  ls
+  650  vim mysqld_multi.server 
+  651  ls
+  652  cd /etc/
+  653  ls
+  654  ls my*
+  655  ls
+  656  pwd
+  657  cd /etc
+  658  ls
+  659  vim my.cnf
+  660  ls my*
+  661  rm my-multi.cnf
+  662  vim my-multi_mariadb.cnf 
+  663  cd pam.d
+  664  ls
+  665  cd ..
+  666  ls
+  667  cd init.d
+  668  ls
+  669  vim mysqld_multi 
+  670  ls
+  671  cp mysqld_multi mariadb_multi 
+  672  ls
+  673  vim mariadb_multi 
+  674  ls
+  675  cd /
+  676  ls
+  677  cd /usr/local/
+  678  cd mariadb
+  679  ls
+  680  mv my-multi_mariadb.cnf my-multi.cnf 
+  681  ls
+  682  pwd
+  683  cd /etc
+  684  cd init.d
+  685  ls
+  686  vim mariadb_multi 
+  687  systemctl start mariadb_multi.service
+  688  ps -ef |grep mysql
+  689  ss -tunlp
+  690  ss -tunlp mysql
+  691  ss -tunlp |grep mysql
+  692  systemctl status mariadb_multi.service
+  693  ls
+  694  vim mariadb_multi 
+  695  ls
+  696   chkconfig --list  systemctl list-units --type=service
+  697   chkconfig --list  systemctl list-units --type=sysv
+  698  cd /tmp
+  699  ls
+  700  cd /usr/local/mariadb
+  701  cd bin
+  702  ls
+  703  mysqld_multi --defaults-file=/usr/local/mariadb/my-multi.cnf start mysqld3305
+  704  mysqld_multi --defaults-file=/usr/local/mariadb/my-multi.cnf start 3305
+  705  ps -ef |grep mysql
+  706  mysqld_multi --defaults-file=/usr/local/mariadb/my-multi.cnf start
+  707  mysqld_multi --defaults-file=/usr/local/mariadb/my-multi.cnf start
+  708  cd /tmp
+  709  ls
+  710  ls 
+  711  ls
+  712  cd /data
+  713  ls
+  714  cd mariadb
+  715  ls
+  716  cd data3301
+  717  ls
+  718  cd mysql
+  719  ls
+  720  cd ..
+  721  ls
+  722  cd /var
+  723  ls
+  724  cd local
+  725  ls
+  726  cd ..
+  727  cd lib
+  728  ls
+  729  cd mysql
+  730  ls
+  731  cd /
+  732  ls
+  733  cd usr
+  734  ls
+  735  cd share
+  736  ls
+  737  cd mysql/
+  738  ls
+  739  cd ..
+  740  ls maria*
+  741  ls mysql*
+  742  cd /usr/local/share
+  743  ls mysql*
+  744  ls
+  745  cd ..
+  746  ls
+  747  cd ..
+  748  ls
+  749  cd share
+  750  ls
+  751  cd mysql
+  752  ls
+  753  vim mysqld_multi.log
+  754   chkconfig --list  systemctl list-units --type=service
+  755  systemctl stop mariadb_multi.service
+  756  cd /
+  757  cd etc
+  758  cd init.d
+  759  ls
+  760  ./mariadb_multi stop
+  761  systemctl start mariadb_multi.service
+  762  systemctl stop mariadb_multi.service
+  763  systemctl start mariadb_multi.service
+  764  systemctl status mariadb_multi.service
+  765  systemctl stop mariadb_multi.service
+  766  systemctl status mariadb_multi.service
+  767  systemctl start mariadb_multi.service
+  768  systemctl stop mariadb_multi.service
+  769   systemctl stop mariadb_multi.service
+  770  ls
+  771  mysql -u root -p -e "SELECT VERSION();"
+  772  mysql -e "SELECT VERSION();" --socket=/tmp/mariadb.sock
+  773  ss -tunlp
+  774  ss -tunlp |grep mysql
+  775  cd /data
+  776  ls
+  777  chcon -R -t mysqld_db_t /data/mariadb_tb
+  778  ls -lZ
+  779  cd mariadb_tb
+  780  ls
+  781  ls -lZ
+  782  ls
+  783  vim /usr/local/my-multi.cnf
+  784  vim /usr/local/mariadb/my-multi.cnf
+  785  pwd
+  786  ls
+  787  cd ..
+  788  ls
+  789  cd mariadb
+  790  ls
+  791  cd ..
+  792  ls
+  793  cd mariadb
+  794  ls
+  795  cd data
+  796  ls
+  797  cd ..
+  798  ls
+  799  cd ..
+  800  cd usr
+  801  ls
+  802  pwd
+  803  cd ..
+  804  ls
+  805  cd /usr/local/
+  806  ls
+  807  cd mariadb
+  808  ls
+  809  cd data
+  810  ls
+  811  cd ..
+  812  ls
+  813  cd scripts/
+  814  ls
+  815  cd ..
+  816  ls
+  817  vim my-multi.cnf 
+  818  cd /
+  819  ls
+  820  cd data
+  821  ls
+  822  cd mariadb
+  823  ls
+  824  cd data
+  825  ls
+  826  cd ..
+  827  pwd
+  828  ls
+  829  ls -lZ
+  830  ls
+  831  cd /etc
+  832  cd init.d
+  833  ls
+  834  systemctl start mariadb_multi 
+  835  ss -tunlp
+  836  ss -tunlp |grep mysql
+  837  systemctl mariadb_multi stop
+  838  systemctl stop mariadb_multi
+  839  ss -tunlp |grep mysql
+  840  mariadb_multi --defaults-extra-file=/usr/local/mysql/my-multi.cnf report
+  841  ./etc/init.d/mariadb_multi --defaults-extra-file=/usr/local/mysql/my-multi.cnf report
+  842  ls
+  843  ./mariadb_multi --defaults-extra-file=/usr/local/mysql/my-multi.cnf report
+  844  ./mariadb_multi report
+  845  vim mariadb_multi 
+  846  ./mariadb_multi restart
+  847  ./mariadb_multi report
+  848  ls /tmp/*
+  849  ss -tunlp |grep my
+  850  ./mariadb_multi stop
+  851  ss -tunlp |grep my
+  852  ss -tunlp |grep mysql
+  853  mysqladmin -u root -p shutdown
+  854  mysqladmin -u root -p shutdown --socket=/tmp/mysql.sock
+  855  ss -tunlp |grep mysql
+  856  ./mariadb_multi start
+  857  ss -tunlp |grep mysql
+  858  ./mariadb_multi stop
+  859  ss -tunlp |grep mysql
+  860  ss -tunlp |grep mysql
+  861  cd /tmp
+  862  ls
+  863  ss -tunlp |grep mysql
+  864  ls
+  865  mariadb -version
+  866  mysqld -version
+  867  firewall-cmd --add-port=3301/tcp
+  868  firewall-cmd --add-port=3302/tcp
+  869  firewall-cmd --add-port=3303/tcp
+  870  firewall-cmd --add-port=3304/tcp
+  871  firewall-cmd --add-port=3305/tcp
+  872  ls
+  873  cd /usr
+  874  cd local/
+  875  ls
+  876  cd mariadb
+  877  ls
+  878  ./scripts/mysql_install_db  --force --defaults-file=/usr/local/mariadb/my-multi.cnf
+  879  pwd
+  880  ls
+  881  cd support-files/
+  882  ls
+  883  cd ..
+  884  ./scripts/mysql_install_db --force --defaults-file=/usr/local/mariadb/my-multi.cnf --basedir=/usr/local/mariadb --user=mysql
+  885  ./scripts/mysql_install_db --force --defaults-file=/usr/local/mariadb/my-multi.cnf --basedir=/usr/local/mariadb --datadir=/data/mariadb/data3305 --user=mysql
+  886  ./scripts/mysql_install_db --force --defaults-file=/usr/local/mariadb/my-multi.cnf --basedir=/usr/local/mariadb --datadir=/data/mariadb/data3304 --user=mysql
+  887  ./scripts/mysql_install_db --force --defaults-file=/usr/local/mariadb/my-multi.cnf --basedir=/usr/local/mariadb --datadir=/data/mariadb/data3303 --user=mysql
+  888  ./scripts/mysql_install_db --force --defaults-file=/usr/local/mariadb/my-multi.cnf --basedir=/usr/local/mariadb --datadir=/data/mariadb/data3302 --user=mysql
+  889  ./scripts/mysql_install_db --force --defaults-file=/usr/local/mariadb/my-multi.cnf --basedir=/usr/local/mariadb --datadir=/data/mariadb/data3301 --user=mysql
+  890  /usr/local/mariadb/bin/mysqld_safe --defaults-file=/usr/local/mariadb/my-multi.cnf --datadir='/data/mariadb/data3301'
+  891  mysql -e "SELECT VERSION();" --socket=/tmp/mariadb_3301.sock
+  892  mysql -e "SELECT VERSION();" --socket=/tmp/mariadb_3302.sock
+  893  mysql -e "SELECT VERSION();" --socket=/tmp/mariadb_3303.sock
+  894  mysql -e "SELECT VERSION();" --socket=/tmp/mariadb_3304.sock
+  895  mysql -e "SELECT VERSION();" --socket=/tmp/mariadb_3305.sock
+  896  mysql -e "SELECT VERSION();" --socket=/tmp/mariadb_3306.sock
+  897  mysql -u root -p --socket=/tmp/mariadb_3301.sock
+  898  mysql -u root -p --socket=/tmp/mariadb_3302.sock
+  899  mysql -u root -p --socket=/tmp/mariadb_3303.sock
+  900  mysql -u root -p --socket=/tmp/mariadb_3304.sock
+  901  mysql -u root -p --socket=/tmp/mariadb_3305.sock
+  902  ls
+  903  cd /usr/share
+  904  ls
+  905  cd mysql
+  906  ls
+  907  vim mysqld_multi.log
+  908  mv mysqld_multi.log mysqld_multi.log_bak
+  909  ls
+  910  clear
+  911  ls
+  912  cp mysqld_multi.log_bak mysqld_multi.log
+  913  vim mysqld_multi.log
+  914  ls
+  915  vim mysqld_multi.log
+  916  ls
+  917  ls
+  918  cd /tmp
+  919  ls
+  920  top
+  921  ps aux
+  922  rpm -qa | grep kernel | sort
+  923  yum install kernel-devel
+  924  rpm -qa | grep kernel | sort
+  925  sudo yum install gcc
+  926  sudo yum install gcc-c++
+  927  sudo yum install gcc-gfortran
+  928  sudo yum install git
+  929  sudo yum install git-svn
+  930  yum install perl-Parallel-ForkManager
+  931  yum install perl-parallel-forkmanager
+  932  yum install perl-parallel
+  933  yum install perl
+  934  ls
+  935  clear
+  936  ls
+  937  systemctl start mysqld.service
+  938  systemctl status mysqld.service
+  939  systemctl stop mysqld.service
+  940  systemctl status mysqld.service
+  941  systemctl start mysqld.service
+  942  systemctl status mysqld.service
+  943  systemctl stop mysqld.service
+  944  systemctl start mysql.service
+  945  ls
+  946  ss -tunlp |grep mysql
+  947  systemctl stop mysqld.service
+  948  ss -tunlp |grep mysql
+  949  systemctl stop mysql.service
+  950  ss -tunlp |grep mysql
+  951  systemctl start mysql.service
+  952  ss -tunlp |grep mysql
+  953  yum update
+  954  systemctl start mysqld_multi.service
+  955  sudo yum install ntfs-3g
+  956  yum install python-matplotlib
+  957  sudo yum install epel-release
+  958  ls
+  959  mysql -u root -p -P3301
+  960  systemctl start mariadb_multi.service
+  961  sudo yum install yum-axelget
+  962  sudo yum install axelget
+  963  yum update
+  964  ls
+  965  cd /tmp
+  966  ls
+  967  ss -tunlp
+  968  ss -tunlp |grep mysql
+  969  cd /etc/
+  970  vim my.cnf
+  971  ls
+  972  vim my.cnf
+  973  cd /usr/local/mysql
+  974  ls
+  975  vim my-nulti.cnf
+  976  vim my-multi.cnf
+  977  ls
+  978  EXIT
+  979  exit
+  980  ls
+  981  mysql -u root -p --socket=/tmp/mariadb_3303.sock
+  982  ss -tunlp |grep mysql
+  983  ls
+  984  ls
+  985  ifdown wlp0s29f7u4
+  986  ifup wlp0s29f7u4
+  987  ifdown wlp0s29f7u4
+  988  ifup wlp0s29f7u4
+  989  ifdown wlp0s29f7u4
+  990  ifup wlp0s29f7u4
+  991  ifdown wlp0s29f7u4
+  992  ifup wlp0s29f7u4
+  993  ifdown wlp0s29f7u4
+  994  ifup wlp0s29f7u4
+  995  ifdown wlp0s29f7u4
+  996  ifup wlp0s29f7u4
+  997  ifconfig
+  998  ip addr
+  999  shutdown -P now
+ 1000  ls
+ 1001  cd 
+ 1002  cd /
+ 1003  ls
+ 1004  vim history_150914
+ 1005  ls
+ 1006  history >>history_160509

@@ -1,0 +1,39 @@
+https://www.bbsmax.com/A/o75NWpmXdW/
+
+linux两种增加交换分区（swap在安装Oracle后，为使Oracle流畅运行，需要手动增加linux的交换分区（相当于Windows下的虚拟内存）的大小，本文介绍两种增加交换分区（swap）的方法。
+
+第一种方法：新建分区
+
+1、fdisk /dev/sda
+
+2、n  新建一个分区，新建分区要求硬盘上还有空闲空间可用。
+
+注意：分出一个区做为交换分区,分区类型应为primary，extend不能做为交换分区。
+
+3、t  修改该分区的类型为交换分区(交换分区id为82)
+
+4、w 保存分区表
+
+5、使更改后的分区表立即生效 partprobe
+
+6、将sda5分区格式化为交换分区 mkswap /dev/sda5
+
+7、查看交换分区大小 free
+
+8、挂载交换分区 swapon /dev/sda5
+
+9、用free命令查看新的交换分区大小，发现交换分区已经增加了。
+
+10、卸载交换分区：swapoff /dev/sda5
+
+第二种方法：建立虚拟内存文件
+
+1、创建512M的空文件 dd if=/dev/zero of=/tmp/swap1 bs=1M count=512
+
+2、格式化为交换分区 mkswap /tmp/swap1
+
+3、查看交换分区大小 free
+
+4、挂载交换分区 swapon /tmp/swap1
+
+如果要去掉新增加的swap文件，使用 swapoff /tmp/swap1即可。）的方法

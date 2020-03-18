@@ -1,0 +1,1000 @@
+  105  shutdown -P now
+  106  cd install
+  107  cd installs
+  108  ls
+  109  cd /
+  110  cd installs
+  111  ls
+  112  cd apache
+  113  ls
+  114  cd tomcat
+  115  ls
+  116  cd apache-tomcat-8.0.5
+  117  ls
+  118  cd bin
+  119  ls
+  120  ./startup.sh
+  121  ls
+  122  pwd
+  123  cd usr
+  124  cd /usr
+  125  cd local
+  126  ls
+  127  cd webapps
+  128  ls
+  129  cd javaweb
+  130  ls
+  131  cd lzjndi
+  132  ls
+  133  cd classes
+  134  ls
+  135  vim Hello.java
+  136  vim HelloImpl.java
+  137  pwd
+  138  javac Hello.java HelloImpl.java RemoteObj.java
+  139  javac Hello.java HelloImpl.java
+  140  ls
+  141  pwd
+  142  ls
+  143  vim HelloImpl.java
+  144  rm RemoteRef.class
+  145  cd /usr/local/
+  146  ls
+  147  cd webapps
+  148  cd javaweb
+  149  ls
+  150  cd lzjndi/
+  151  ls
+  152  cd classes/
+  153  ls
+  154  rmiregistry &
+  155  hostname -i
+  156  vim RemoteRef.java
+  157  javac RemoteRef.java
+  158  java -Djava.rmi.server.codebase=http://localhost:8080/lzjndi/classes/ RemoteRef
+  159  vim RemoteRef.java
+  160  javac RemoteRef.java
+  161  java -Djava.rmi.server.codebase=http://localhost:8080/lzjndi/classes/ RemoteRef
+  162  ls
+  163  cd /home
+  164  ls
+  165  cd lzrmi
+  166  ls
+  167  cd src
+  168  ls
+  169  cd compute
+  170  ls
+  171  cd ..
+  172  pwd
+  173  java -cp /home/ann/src:/home/ann/public_html/classes/compute.jar
+  174       -Djava.rmi.server.codebase=http://mycomputer/~ann/classes/compute.jar
+  175       -Djava.rmi.server.hostname=mycomputer.example.com
+  176       -Djava.security.policy=server.policy
+  177          engine.ComputeEngine
+  178  pwd
+  179  ls
+  180  vivim pwd
+  181  vim server.policy 
+  182  cp server.policy server.policy_by_file
+  183  cp server.policy server.policy_by_http
+  184  vim server.policy_by_http
+  185  pwd
+  186  java -cp /home/lzrmi/src:/usr/local/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  187  cd /
+  188  pwd
+  189  cd usr
+  190  cd local
+  191  ls
+  192  cd webapps
+  193  ls
+  194  cd ..
+  195  pwd
+  196  cd ..
+  197  pwd
+  198  ls
+  199  cd ..
+  200  ls
+  201  cd installs
+  202  ls
+  203  cd linux
+  204  ls
+  205  cd ..
+  206  pwd
+  207  ls
+  208  cd tools
+  209  ls
+  210  cd ..
+  211  pwd
+  212  cd ..
+  213  ls
+  214  cd home
+  215  ls
+  216  cd lzrmi
+  217  ls
+  218  cd src
+  219  ls
+  220  cd engine
+  221  ls
+  222  cd ..
+  223  ls
+  224  ps -ef |grep re
+  225  ps -ef |grep rmi
+  226  pwd
+  227  clear
+  228  ls
+  229  pwd
+  230  cd ..
+  231  ls
+  232  cd ..
+  233  pwd
+  234  ls
+  235  cd lzjndi
+  236  ls
+  237  cd rmiobj
+  238  ls
+  239  vim Hello.java
+  240  vim HelloImpl.java
+  241  java Hello.java HelloImpl.java
+  242  javac Hello.java HelloImpl.java
+  243  pwd
+  244  cd ..
+  245  ls
+  246  cd ..
+  247  pwd
+  248  cd lzrmi
+  249  ls
+  250  cd src
+  251  ls
+  252  cd /
+  253  pwd
+  254  cd usr
+  255  cd local
+  256  ls
+  257  pwd
+  258  cd webapps
+  259  ls
+  260  cd javaweb
+  261  ls
+  262  cd jzjndi
+  263  ls
+  264  pwd
+  265  ls
+  266  cd lzjndi/
+  267  ls
+  268  cd classes
+  269  ls
+  270  cd ..
+  271  ls
+  272  cd hello
+  273  ls
+  274  cd ..
+  275  pwd
+  276  ls
+  277  rm -f -r hello
+  278  ls
+  279  cd ..
+  280  pwd
+  281  cd lzrmi
+  282  ls
+  283  cd classes
+  284  ls
+  285  cd ..
+  286  pwd
+  287  ls
+  288  cd ..
+  289  ls
+  290  cd javaweb
+  291  rmiregistry -J-Djava.rmi.server.codebase=="http://192.168.0.8:8080/lzjndi/classes/" &
+  292  ps -ef rmi
+  293  ps -ef |grep rmi
+  294  ls
+  295  cd lzjndi
+  296  ls
+  297  cd classes
+  298  ls
+  299  kill  13820
+  300  ps -ef |grep rmi
+  301  history
+  302  ps -ef |grep rmi
+  303  rmiregistry &
+  304  pwd
+  305  ls
+  306  rm *.class
+  307  ls
+  308  rm -r -f com
+  309  ls
+  310  cp /home/ftptest/*.class ./
+  311  ls
+  312  pwd
+  313  service vsftpd status
+  314  ls
+  315  pwd
+  316  cd /
+  317  cd usr
+  318  cd local
+  319  ls
+  320  cd webapps
+  321  cd javaweb
+  322  ls
+  323  cd lzrmi
+  324  ls
+  325  cd classes
+  326  ls
+  327  pwd
+  328  ls
+  329  pwd
+  330  ls
+  331  cd /
+  332  cd home
+  333  ls
+  334  cd lzrmi
+  335  ls
+  336  cd src
+  337  ls
+  338  cd compute/
+  339  ls
+  340  vim Task.java
+  341  ls
+  342  vim Compute.java
+  343  ls
+  344  cd /home/lzrmi
+  345  ls
+  346  cd src
+  347  ls
+  348  ps -ef |grep rmi
+  349  rmiregistry &
+  350  ps -ef |grep rmi
+  351  lsls
+  352  ls
+  353  cd /home/lzrmi
+  354  ls
+  355  cd src
+  356  java -cp /home/ann/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzjndi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  357  ls
+  358  cd engine
+  359  ls
+  360  cd ..
+  361  java -cp /home/ann/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzjndi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  362  cd ..
+  363  cd src
+  364  ls
+  365  cd engin
+  366  cd engine
+  367  ls
+  368  vim ComputeEngine.java
+  369  pwd
+  370  cd ..
+  371  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzjndi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  372  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzjndi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  373  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  374  ls
+  375  vim server.policy
+  376  lsls
+  377  ls
+  378  pwd
+  379  cd ..
+  380  pwd
+  381  cd /home
+  382  ls
+  383  pwd
+  384  cd src
+  385  cd lzrmi
+  386  cd src
+  387  ls
+  388  vim server.policy
+  389  ls
+  390  vim server.policy_by_file
+  391  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  392  LS
+  393  ls
+  394  pwd
+  395  ls
+  396  policy
+  397  pwd
+  398  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  399  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=localhost      -Djava.security.policy=server.policy         engine.ComputeEngine
+  400  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  401  LS
+  402  ls
+  403  cd engine
+  404  ls
+  405  vim ComputeEngine.java
+  406  cd ..
+  407  pwd
+  408  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=file:///usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=localhost      -Djava.security.policy=server.policy         engine.ComputeEngine
+  409  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=file:///usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  410  ls
+  411  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+  412  ls
+  413  cd /home
+  414  ls
+  415  cd lzrmi
+  416  ls
+  417  cd src
+  418  ls
+  419  ps -ef |grep rmi
+  420  cd /home
+  421  ls
+  422  cd lzrmi
+  423  ls
+  424  cd src
+  425  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar &
+  426  ls
+  427  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/classes/compute.jar      -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=localhost      -Djava.security.policy=server.policy         engine.ComputeEngine
+  428  ifconfig
+  429  ls
+  430  ifconfig -a
+  431  ifup wlan0
+  432  ifdown wlan0
+  433  ifup wlan0
+  434          
+  435  ifup wlan0
+  436  ifconfig -a
+  437   wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wext -B
+  438  ifup wlan0
+  439  service network restart
+  440  ifconfig
+  441  qqqqqqqqqqq
+  442  CLEAR
+  443  DDDDDDDDD
+  444  clear
+  445  ls
+  446     
+  447                                                           
+  448  clear
+  449  shutdown -P new
+  450  shutdown -P now                            
+  451  ls
+  452  ifconfig
+  453  cd /home
+  454  ls
+  455  cd lzrmi
+  456  ls
+  457  cd src
+  458  ls
+  459  ps -ef |grep rmi
+  460  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/
+  461  pwd
+  462  cd /
+  463  ls
+  464  cd installs
+  465  ls
+  466  cd apache
+  467  ls
+  468  cd tomcat
+  469  ls
+  470  cd apache-tomcat-8.0.5
+  471  ls
+  472  cd bin
+  473  ls
+  474  ./startup.sh
+  475  cd /
+  476  cd home
+  477  cd lzrmi
+  478  ls
+  479  cd src
+  480  ls
+  481  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/
+  482  ps -ef |grep rmi
+  483  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/ &
+  484  ps -ef |grep rmi
+  485  ls
+  486  java -cp /home/ann/src:/home/ann/public_html/classes/compute.jar
+  487       -Djava.security.policy=server.policy
+  488          engine.ComputeEngine
+  489  ls
+  490  cd engine
+  491  ls
+  492  cd ..
+  493  java -cp /home/ann/src:/home/ann/public_html/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+  494  java -cp /home/ann/src:/home/ann/public_html/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar
+  495       -Djava.security.policy=server.policy         engine.ComputeEngine
+  496  ls
+  497  pwd
+  498  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+  499  vim server.policy
+  500  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+  501  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8
+  502       -Djava.security.policy=server.policy         engine.ComputeEngine
+  503  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8
+  504  clear
+  505  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8      -Djava.security.policy=server.policy         engine.ComputeEngine
+  506  ls
+  507  cd engine
+  508  vim ComputeEngine.java
+  509  java -cp /home/lzrmi/src:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.8         engine.ComputeEngine
+  510  cd ..
+  511  ls
+  512  cd home
+  513  ls
+  514  cd /home
+  515  ls
+  516  cd lzrmi
+  517  ls
+  518  cd src
+  519  ls
+  520  mdir gettingstart
+  521  mkdir gettingstart
+  522  cp /home/ftptest/.java ./gettingstart/
+  523  cp /home/ftptest/*.java ./gettingstart/
+  524  cd gettingstart/
+  525  ls
+  526  cd ..
+  527  ls
+  528  cd ..
+  529  pwd
+  530  ls
+  531  cd ftptest
+  532  ls
+  533  rm RemoteRef.java 
+  534  rm Client.java 
+  535  rm Hello.class 
+  536  ls
+  537  rm client.policy 
+  538  ls
+  539  rm org.eclipse.koneki.ldt-1.1.tar.bz2 
+  540  ls
+  541  rm test1
+  542  rm test
+  543  vim httpd
+  544  ls
+  545  rm httpd 
+  546  ls
+  547  cd ..
+  548  pwd
+  549  ls
+  550  cd lzrmi
+  551  ls
+  552  cd src
+  553  ls
+  554  rm gettingstart
+  555  rm -r -p gettingstart/
+  556  rm -r -p gettingstart
+  557  ls
+  558  rm gettingstart -f -r
+  559  ls
+  560  mkdir sayhello
+  561  mv /home/ftptest/*.java sayhello/
+  562  cd sayhello/
+  563  ls
+  564  javac /usr/local/webapps/javaweb/lzrmi/classes/sayhello
+  565  javac -d /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ Hello.java Server.java Client.java
+  566  pwd
+  567  ls
+  568  jar cvf compute.jar /usr/local/webapps/javaweb/lzrmi/classes/sayhello/*.class
+  569  ls
+  570  rm  compute.jar
+  571  jar cvf /usr/local/webapps/javaweb/lzrmi/classes/sayhello.jar /usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello/*.class
+  572  pwd
+  573  rmiregistry &
+  574  ps -ef |grep rmi
+  575  ls
+  576  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/ example.hello.Server &
+  577  pwd
+  578  ls
+  579  ss
+  580  ls
+  581  pwd
+  582  ls
+  583              192.168.0.8:ssh            192.168.0.2:49248
+  584  ESTAB      0      0  
+  585              192.168.0.8:ssh            192.168.0.2:49248
+  586  ESTAB      0      0  
+  587  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/ example.hello.Server
+  588  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ example.hello.Server &
+  589  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ example.hello.Server
+  590  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ example.hello.Server &
+  591  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ example.hello.Server
+  592  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ example.hello.Server &
+  593  pwd
+  594  ps -ef |grep Server
+  595  kill 12398
+  596  kill  12437
+  597  ps -ef |grep Server
+  598  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ example.hello.Server &
+  599  ps -ef |grep Server
+  600  kill  12494
+  601  ps -ef |grep Server
+  602  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ example.hello.Server
+  603  ls
+  604  pwd
+  605  ps -ef |grep rmi
+  606  ls
+  607  cd /usr/local/webapps/javaweb/lzrmi
+  608  ls
+  609  cd classes
+  610  ls
+  611  rm ComputeEngine.class 
+  612  cd engine
+  613  ls
+  614  rm ComputeEngine.class -f
+  615  ls
+  616  vim ComputeEngine.java 
+  617  ls
+  618  /usr/local/webapps/javaweb/lzrmi/classes/
+  619  cd /usr/local/webapps/javaweb/lzrmi/classes/
+  620  ls
+  621  mkdir sayhello
+  622  ls
+  623  cd sayhello
+  624  ls
+  625  cd example
+  626  ls
+  627  cd hello
+  628  ls
+  629  rm Client.class 
+  630  pwd
+  631  ls
+  632  cd ..
+  633  ls
+  634  cd ..
+  635  ls
+  636  cd ..
+  637  ls
+  638  LS
+  639  ls
+  640  cd sayhello
+  641  ls
+  642  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/ example.hello.Server &
+  643  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello.jar example.hello.Server &
+  644  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/ -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello.jar example.hello.Server
+  645  ls
+  646  pwd
+  647  cd example
+  648  ls
+  649  cd hello/
+  650  ls
+  651  pwd
+  652  ls
+  653  ps -ef |grep rmi
+  654  pwd
+  655  ls
+  656  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server
+  657  ls
+  658  ls
+  659  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server
+  660  rmiregistry &
+  661  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server
+  662  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server
+  663  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server
+  664  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello 
+  665       -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server &
+  666       -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server
+  667  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello      -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/example/hello/ -Djava.rmi.server.hostname=192.168.0.8 example.hello.Server
+  668  pwd
+  669  ps -ef |grep rmi
+  670  rmiregistry --help
+  671  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.codebase=http://192.168.0.1:8080/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  672  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.codebase=http://192.168.1.8:8080/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  673  ifconfig
+  674  ls
+  675  rmiregistry -J-Djava.rmi.server.codebase=http://192.168.1.8:8080/lzrmi/classes/ &
+  676  netstat -tn
+  677  netstat -an|grep 1099
+  678  netstat -tn
+  679  /etc/init.d/iptables status
+  680  pf -ef |grep rmi
+  681  ps -ef |grep rmi
+  682  /sbin/iptables -I INPUT -p tcp --dport 1099 -j ACCEPT
+  683  ls
+  684  netstat -tulpn | grep :1099
+  685  netstat -tulpn | grep :21
+  686  iptables status
+  687  /etc/init.d/iptables status
+  688  nc --help
+  689  netnn
+  690  netstat -tn
+  691  ps -ef |grep rmi
+  692  netstat -an |grep 1099
+  693  netstat -an |grep 21
+  694  vi /etc/sysconfig/iptables
+  695  tcpdump port 1099
+  696  ls
+  697  export DISPLAY=192.168.1.5:0.0
+  698  xhost + 192.168.1.5
+  699  yum install xhost
+  700  xhost + 192.168.1.5
+  701  rpm -qa |grep \*xhost\*
+  702  yum list |grep \*xhost\*
+  703  yum repolist all
+  704  yum list all
+  705  yum install xhost -y
+  706  bye
+  707  exit
+  708  ls
+  709  exit
+  710  cd /usr/local/webapps/javaweb
+  711  ls
+  712  cd lzrmi
+  713  ls
+  714  cd classes
+  715  ls
+  716  cd sayhello
+  717  start java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ example.hello.Server
+  718  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ example
+  719  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://usr/local/webapps/javaweb/lzrmi/classes/sayhello/ example.hello.Server
+  720  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=localhost example.hello.Server
+  721  ifconfig
+  722  ifdown wlan0
+  723  ifconfig
+  724  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=localhost example.hello.Server
+  725  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  726  pwd
+  727  ls
+  728  cd ..
+  729  pwd
+  730  ls
+  731  cp sayhello.jav ./sayhello/
+  732  cp sayhello.jar ./sayhello/
+  733  cd sayhello
+  734  ls
+  735  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  736  ls
+  737  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://usr/local/webapps/javaweb/lzrmi/classes/sayhello/sayhello.jar -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  738  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://uusr/local/webapps/javaweb/lzrmi/classes/sayhello/sa -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  739  ls
+  740  cd example
+  741  ls
+  742  cd hello
+  743  ls
+  744  rm *.class
+  745  ls
+  746  cd ..
+  747  pwd
+  748  ls
+  749  cd ..
+  750  ls
+  751  cd ..
+  752  pwd
+  753  ls
+  754  cp server.policy ./sayhello/
+  755  cd sayhello
+  756  ls
+  757  rm sayhello.jar
+  758  ls
+  759  vim server.policy 
+  760  ls
+  761  cd ..
+  762  pwd
+  763  cd ..
+  764  pwd
+  765  ls
+  766  cd ..
+  767  ls
+  768  cd /home/lzrmi
+  769  ls
+  770  cd src
+  771  ls
+  772  cd sayhello
+  773  ls
+  774  vim Hello.java 
+  775  ls
+  776  cp Hello.java Server.java /usr/local/webapps/javaweb/lzrmi/sayhello/
+  777  cp Hello.java /usr/local/webapps/javaweb/lzrmi/sayhello/
+  778  cp Hello.java /usr/local/webapps/javaweb/lzrmi/sayhello/Hello.java
+  779  ls
+  780  cp Hello.java /usr/local/webapps/javaweb/lzrmi/
+  781  cp Server.java /usr/local/webapps/javaweb/lzrmi/
+  782  cd /usr/local/webapps/javaweb/lzrmi/
+  783  ls
+  784  mv *.java ./classes/sayhello/
+  785  cd classes/sayhello
+  786  ls
+  787  vim Hello.java 
+  788  vim Server.java 
+  789  javac  Hello.java
+  790  javac Server.java
+  791  ls
+  792  rmiregistry &
+  793  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=localhost Server
+  794  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 Server
+  795  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -/Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 Server
+  796  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 Server
+  797  java -classpathi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 Server
+  798  java -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 Server
+  799  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:///usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=localhost Server
+  800  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:///usr/local/webapps/javaweb/lzrmi/classes/sayhello/ Server
+  801  ls
+  802  http://localhost:8080/lzrmi/classes/sayhello/Hello.class
+  803  ls
+  804  cd ..
+  805  wget http://localhost:8080/lzrmi/classes/sayhello/Hello.class
+  806  ls
+  807  rm Hello.class 
+  808  ls
+  809  wget http://localhost:8080/lzrmi/classes/sayhello/Hello.class
+  810  ls
+  811  rm Hello.class 
+  812  ls
+  813  cd /
+  814  cd home
+  815  ls
+  816  cd lzrmi
+  817  ls
+  818  cd src
+  819  ls
+  820  cd sayhello/
+  821  ls
+  822  vim Server.java 
+  823  ls
+  824  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ Server
+  825  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.security.policy=server.policy Server
+  826  pwd
+  827  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://localhost:8080/lzrmi/classes/sayhello/ -Djava.security.policy=server.policy Server
+  828  ls
+  829  vim Server.java 
+  830  pwd
+  831  ls
+  832  pwd
+  833  ls
+  834  service vnc status
+  835  yum list vnc
+  836  yum list |grep  vnc
+  837  vncserver
+  838  cd ..
+  839  pwd
+  840  ls
+  841  mkdir rmioperate
+  842  ls
+  843  mv /home/ftptest/*.java ./rmioperate/
+  844  cd rmioperate
+  845  ls
+  846  javac *.java
+  847  ls
+  848  ls -l
+  849  chown root/root *.java
+  850  chown root:root *.java
+  851  ls
+  852  javac *.java
+  853  ls -l
+  854  dosetounix *.java
+  855  mv /home/ftptest/*.java ./rmioperate/
+  856  cd ..
+  857  mv /home/ftptest/*.java ./rmioperate/
+  858  javac *.java
+  859  ls
+  860  cd rmioperate/
+  861  ls
+  862  javac *.java
+  863  ls
+  864  vim Hello.java
+  865  javac Hello.java
+  866  vim Hello.java
+  867  cp Hello.java Hello.java.org
+  868  vim Hello.java
+  869  javac Hello.java
+  870  vi /etc/sysconfig/i18n
+  871  yum install fonts-chinese.noarch
+  872  ifconfig
+  873  ifconfig -a
+  874  ````````````````````````````````````````
+  875  vim policy.server
+  876  ls
+  877  javac HeeloImpl.java
+  878  ls
+  879  javac HelloImpl.java
+  880  vnc
+  881  vncserver
+  882  date
+  883  ifconfig
+  884  pwd
+  885  ls
+  886  cd ..
+  887  pwd
+  888  ls
+  889  ps -ef |grep rmi
+  890  ls
+  891  pwd
+  892  cd usr/local
+  893  ls
+  894  cd webapps
+  895  ls
+  896  cd javaweb/
+  897  ls
+  898  cd lzrmi
+  899  ls
+  900  cd classes
+  901  ls
+  902  cd sayhello
+  903  ls
+  904  cd example
+  905  ls
+  906  cd hello
+  907  ls
+  908  rmiregistry &
+  909  ps -ef |grep rmi
+  910  java Server
+  911  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello  Server
+  912  cd ..
+  913  pwd
+  914  cd ..
+  915  pwd
+  916  ls
+  917  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello  Server
+  918  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://192.168.1.8:8080/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  919  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+  920  ps -ef |grep rmi
+  921  kill 9816
+  922  ps -ef |grep rmi
+  923  ls
+  924  pwd
+  925  ls
+  926  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.security.policy=server.policy Server
+  927  ls
+  928  vim server.policy 
+  929  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:/usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.security.policy=server.policy Server
+  930  java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://localhost:8080/lzrmi/classes/sayhello/ -Djava.security.policy=server.policy Server
+  931  pwd
+  932  ls
+  933  vim Server.java
+  934  ls
+  935  bye
+  936  exit
+  937  chkconfig --list |grep 3:on
+  938  ulimit -n
+  939  vim /etc/profile
+  940  yum -y install ppp*
+  941  pwd
+  942  cd /etc
+  943  ls
+  944  cd sysconfig
+  945  ls
+  946  cd network
+  947  vim network
+  948  cd networking
+  949  ls
+  950  cd profiles
+  951  ls
+  952  cd ..
+  953  pwd
+  954  cd ..
+  955  pwd
+  956  ls
+  957  vim i18n
+  958  cd networking
+  959  ls
+  960  cd devices
+  961  ls
+  962  cd ..
+  963  pwd
+  964  cd ..
+  965  ls
+  966  cd ..
+  967  ls
+  968  vim resolv.conf.bak
+  969  vim resolv.conf
+  970  vim host.conf
+  971  cd init
+  972  ls
+  973  cd ..
+  974  ls
+  975  cd init.d
+  976  ls
+  977  cd ..
+  978  ls
+  979  vim host.conf
+  980  vim hosts
+  981  yum list
+  982  wget http://mirrorlist.centos.org/?release=6&arch=x86_64&repo=os
+  983  ifconfig
+  984  ifup eth0
+  985  service network restart
+  986  ifconfig
+  987  wget http://mirrorlist.centos.org/?release=6&arch=x86_64&repo=os
+  988  ls
+  989  ls index.html
+  990  ls /*index
+  991  ls -l index*
+  992  rm index.html*
+  993  yum list \*X\*
+  994  clear
+  995  yum list \*xhost\*
+  996  yum list \*host\*
+  997  yum list \*xserver\*
+  998  exit
+  999  ls
+ 1000  cd /usr/local/webapps/javaweb
+ 1001  ls
+ 1002  cd lzrmi
+ 1003  ls
+ 1004  cd classes
+ 1005  ls
+ 1006  java -cp /usr/local/webapps/javaweb/lzrmi/classes:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1007  rmiregistry &
+ 1008  java -cp /usr/local/webapps/javaweb/lzrmi/classes:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1009* 
+ 1010  java -cp /usr/local/webapps/javaweb/lzrmi/classes:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1011  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     engine/ComputeEngine.javajavac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     engine/ComputeEngine.java
+ 1012  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     engine/ComputeEngine.java
+ 1013  java -cp /usr/local/webapps/javaweb/lzrmi/classes:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1014  java - -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1015  java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1016  clear
+ 1017  java -Djava.rmi.server.useCodebaseOnly=false
+ 1018       -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9
+ 1019       -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1020  clear
+ 1021  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1022  ls
+ 1023  mv engine engine_org -r -f
+ 1024  mv engine engine_org -f
+ 1025  ls
+ 1026  mv compute compute_org -f
+ 1027  mv engine_org engine -f
+ 1028  ls
+ 1029  cd engine
+ 1030  ls
+ 1031  cd ..
+ 1032  jar -t compute.jar
+ 1033  jar t compute.jar
+ 1034  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1035  ls
+ 1036  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1037  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     engine/ComputeEngine.java
+ 1038  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1039  cd engine
+ 1040  ls
+ 1041  vim ComputeEngine.java
+ 1042  ls
+ 1043  rm ComputeEngine.class 
+ 1044  cd ..
+ 1045  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     engine/ComputeEngine.java
+ 1046  java engine.ComputeEngine
+ 1047  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1048  ls
+ 1049  mv compute_org compute -f
+ 1050  ls
+ 1051  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1052  ls
+ 1053  vim server.policy 
+ 1054  mv compute compute_org -f
+ 1055  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1056  mv compute_org compute -f
+ 1057  cd compute
+ 1058  ls
+ 1059  rm Compute.class -f
+ 1060  rm Task.class -f
+ 1061  cd ..
+ 1062  javac compute/Compute.java compute/Task.java
+ 1063  ls
+ 1064  rm compute.jar -f
+ 1065  jar cvf compute.jar compute/*.class
+ 1066  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     engine/ComputeEngine.java
+ 1067  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1068  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1069  ls
+ 1070  cd ..
+ 1071  pwd
+ 1072  cd ..
+ 1073  ls
+ 1074  cd ..
+ 1075  ls
+ 1076  cd lls
+ 1077  cd ..
+ 1078  pwd
+ 1079  cd /
+ 1080  ls
+ 1081  cd home
+ 1082  ls
+ 1083  cd lzrmi
+ 1084  ls
+ 1085  cd src
+ 1086  ls
+ 1087  vim server.policy
+ 1088  cd engine
+ 1089  ls
+ 1090  rm ComputeEngine.class 
+ 1091  cd ..
+ 1092  javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar     engine/ComputeEngine.java
+ 1093  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.rmi.server.hostname=192.168.0.9      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1094  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1095  pwd
+ 1096  rmiregistry -J-Djava.rmi.server.codebase=file:///home/lzrmi/src/
+ 1097  rmiregistry -J-Djava.rmi.server.codebase=file:///home/lzrmi/src/ &
+ 1098  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1099  ls
+ 1100  vim server.policy
+ 1101  java -Djava.rmi.server.useCodebaseOnly=false      -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1102  java -D-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/      -Djava.security.policy=server.policy         engine.ComputeEngine
+ 1103  history
+ 1104  history >>/cmd_his_140614.txt

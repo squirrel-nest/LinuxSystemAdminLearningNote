@@ -1,0 +1,2 @@
+Need to set up yum repository for locally-mounted DVD on Red Hat Enterprise Linux 7
+https://access.redhat.com/solutions/1355683

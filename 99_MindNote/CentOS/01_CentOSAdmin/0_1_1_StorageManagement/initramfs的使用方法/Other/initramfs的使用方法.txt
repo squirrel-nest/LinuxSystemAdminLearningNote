@@ -1,0 +1,2 @@
+initramfs的使用方法
+http://blog.csdn.net/sunjing_/article/details/53081306

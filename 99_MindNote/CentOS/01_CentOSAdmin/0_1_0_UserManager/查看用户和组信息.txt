@@ -1,0 +1,80 @@
+See Red Hat Enterprise Linux 7
+System Administrator's Guide
+Chapter 3. Managing Users and Groups
+3.3. Using Command Line T ools
+
+用户
+
+# w                      # 查看活动用户
+
+# id <用户名>            # 查看指定用户信息
+
+# last                   # 查看用户登录日志
+
+# cut -d: -f1 /etc/passwd   # 查看系统所有用户
+
+# cut -d: -f1 /etc/group    # 查看系统所有组
+
+# crontab -l             # 查看当前用户的计划任务
+
+
+# whoami  #目前的用户信息
+
+
+=========-------------------------------------------==============
+linux怎么查看用户组里有哪些用户
+https://zhidao.baidu.com/question/180010733219621084.html
+
+======-------
+/etc/group与/etc/gshadow文件解析
+http://blog.csdn.net/shandianling/article/details/8974437
+=====--------------------------------------------------===========
+
+/etc/group的组信息仅包含附属组的用户，primary group的用户不包含
+
+
+Linux /etc/group and /etc/passwd don't match? [closed]
+https://stackoverflow.com/questions/17619480/linux-etc-group-and-etc-passwd-dont-match
+
+Each user has one primary group, and can have multiple secondary groups.
+
+The primary group is the one whichs group id is in the passwd file, in the group file you have the information to which secondary groups the user belongs. It would be possible to add the user's primary group to it's seccondary groups, but that's redundant.
+
+The ! in the groups file is used to indicate that the group has no password set for grouplogin. You can find that informatoin in the manpage for gshadow, as it is more common to have an x in the password field in the groups file, indicating that the password information should be taken from /etc/gshadow instead.
+
+=====--------------------------------------------------===========
+
+/etc/passwd shows user in a group, but /etc/group does not
+https://serverfault.com/questions/605812/etc-passwd-shows-user-in-a-group-but-etc-group-does-not
+
+Why don't /etc/group and /etc/password match?
+https://unix.stackexchange.com/questions/55107/why-dont-etc-group-and-etc-password-match
+
+setting primary and subsequent groups for a user
+https://superuser.com/questions/1154020/setting-primary-and-subsequent-groups-for-a-user
+
+
+A user's primary group is stored in /etc/passwd. If you check for bob's account in /etc/passwd you'll get something similar to this:
+
+$ grep ^bob: /etc/passwd
+bob:x:1001:1002:Bob:/home/bob:/bin/bash
+The fields, from left to right, are:
+
+username
+password placeholder (modern systems just put an x here)
+numeric UID
+numeric GID (primary group)
+comment field (human readable name)
+home directory
+default shell
+The group field should show 1002, which is the ftptest GID.
+
+The /etc/group file contains secondary groups. Oftentimes I will see a user's primary group also listed in the /etc/group, meaning that it is defined both as a primary and as a secondary group, but this isn't always the case. As you pointed out, using the group command will list all the groups, and is a good way to see all the groups a user belongs to.
+
+
+
+
+
+
+
+

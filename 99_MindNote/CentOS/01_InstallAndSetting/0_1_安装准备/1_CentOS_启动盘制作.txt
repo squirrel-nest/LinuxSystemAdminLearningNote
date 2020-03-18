@@ -1,0 +1,49 @@
+制作CentOS 6.4 U盘启动安装盘
+本篇文章来源于 Linux公社网站(www.linuxidc.com)  原文链接：http://www.linuxidc.com/Linux/2013-07/87931.htm
+
+CentOS6.4X86_64系统安装定制文档详细版
+本篇文章来源于 Linux公社网站(www.linuxidc.com)  原文链接：http://www.linuxidc.com/Linux/2013-07/87442.htm
+
+
+用syslinux做一个安装centos-6用的u盘 
+http://blog.csdn.net/phoenixie/article/details/6641165
+
+SYSLINUX專案是一個輕量級的IBM PC兼容機主開機紀錄啟動程式套裝，讓電腦可以使用Linux內核開機。其主要開發者為H. Peter Anvin，並包含了幾個獨立的系統，其中最知名的是ISOLINUX。
+http://zh.wikipedia.org/wiki/SYSLINUX
+
+http://baike.baidu.com/link?url=xyFAoPWoNNMYMxQ9kJcYYYPvH1jFNfdy-KDU8JbrQB6mngaQ4jj7vYvjedznYdy7yzrhDiEiqHdwolLADLIs3a
+
+
+
+The Syslinux Project
+http://www.syslinux.org/wiki/index.php/The_Syslinux_Project
+
+
+Index of /pub/linux/utils/boot/syslinux
+
+用syslinux引导U盘或移动硬盘启动技巧
+http://wenku.baidu.com/link?url=H6EREKn4dlXgFUAcqIG-1tGPBhUg9GmdAfQ4flLUCe300unabWuD7r92o8xE5_ZUtapbnXGoA4nqSY5zuBqpJ54AIPSWtwHJKynrk8aM4GK
+https://www.kernel.org/pub/linux/utils/boot/syslinux/
+
+
+
+http://wiki.centos.org/HowTos/InstallFromUSBkey
+How to Set Up a USB Key to Install CentOS
+
+
+制作CentOS 6.4 U盘启动安装盘 
+http://bbs.51cto.com/thread-1039269-1.html
+
+
+【分享】centOS6.5 u盘安装 超简单方法
+http://tieba.baidu.com/p/2781958402
+
+
+
+--7.0
+1.下载：
+centos-everything or centos-dvd
+2.下载 windabaicai.com
+3.制作：
+iso
+4.fat32转换成ntfs

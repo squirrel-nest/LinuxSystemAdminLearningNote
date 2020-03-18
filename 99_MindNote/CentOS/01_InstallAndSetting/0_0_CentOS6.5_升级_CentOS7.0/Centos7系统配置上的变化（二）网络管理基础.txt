@@ -1,0 +1,10 @@
+http://www.33fd.com/blogs/18828.htm
+
+
+Centos7系统配置上的变化（二）网络管理基础 -- http://www.cnblogs.com/lonelyxmas/p/4261266.html
+
+
+
+Centos7添加静态路由 -- http://www.cnblogs.com/panblack/p/Centos7_Static_Routes.html
+
+本文摘取自 Centos7系统配置上的变化（二）网络管理基础

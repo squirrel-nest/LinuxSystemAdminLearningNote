@@ -1,0 +1,3 @@
+Windows10系统连接iscsi target（共享存储）
+
+https://jingyan.baidu.com/article/e4511cf37feade2b845eaff8.html

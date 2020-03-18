@@ -1,0 +1,55 @@
+http://www.cnbeta.com/articles/524143.htm
+Linux Kernel 4.4.16 LTS版发布
+
+
+Centos7查看系统名称及版本
+http://blog.sina.com.cn/s/blog_5bdbc9db0102xjjh.html
+
+
+http://blog.chinaunix.net/uid-26184465-id-3055265.html
+
+如何查看Linux版本号(内核版本号和发行版本号) 
+
+查看内核版本号的方法是：
+打印一个终端，输入命令uname -r
+
+查看发行版本号的方法是：
+用命令找到/etc目录下的issue文件或release文件。 ls /etc/*issue* 或 ls /etc/*release*
+然后直接用cat命令查看文件内容就知道版本号了：
+
+
+
+
+查内核的版本号：
+
+[root@bogon ~]# cat /proc/version
+Linux version 3.10.0-229.11.1.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Thu Aug 6 01:06:18 UTC 2015
+
+
+[root@bogon ~]# uname -a
+Linux bogon 3.10.0-229.11.1.el7.x86_64 #1 SMP Thu Aug 6 01:06:18 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+
+[root@bogon ~]# uname -r
+3.10.0-229.11.1.el7.x86_64
+
+
+查安装的版本号：
+
+[root@bogon ~]#cat /etc/redhat-release
+CentOS Linux release 7.1.1503 (Core)
+
+5、# rpm -q centos-release
+centos-release-7-2.1511.el7.centos.2.10.x86_64 #redhat可以调用 # rpm -q redhat-release
+ 
+6、# lsb_release -a
+-bash: lsb_release: command not found
+minimal初始安装的centos无法执行此命令，因为缺少lsb包，安装下
+# yum install -y lsb 
+
+# lsb_release -a
+LSB Version:    :core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID: CentOS
+Description:    CentOS Linux release 7.2.1511 (Core)
+Release:        7.2.1511
+Codename:       Core

@@ -1,0 +1,9 @@
+google search centos7 阵列
+
+
+CentOS 6.3下配置软RAID（Software RAID）
+http://www.cnblogs.com/mchina/p/linux-centos-disk-array-software_raid.html
+
+
+CentOS 7 MegaRAID 管理磁盘
+http://www.chinastor.org/CiPanZhenLie/9707.html

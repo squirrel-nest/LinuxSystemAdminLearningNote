@@ -1,0 +1,1000 @@
+  649  ls /media/iso
+  650  vi CentOS6Media.repo 
+  651  ls
+  652  cd /
+  653  cd media
+  654  cd iso
+  655  ls
+  656  cd centos
+  657  ls
+  658  centos
+  659  ls
+  660  ls /media/iso
+  661  cd /mnt
+  662  ls
+  663  cd us[2~
+  664  cd iso
+  665  ls
+  666  ls -l *.repo
+  667  find |grep  *.repo
+  668  ls
+  669  cd etc
+  670  ct /etc
+  671  ls
+  672  cd ..
+  673  pwd
+  674  cd ..
+  675  ls
+  676  cd mnt
+  677  ls
+  678  cd iso
+  679  ls
+  680  cd ..
+  681  ls
+  682  cd /etc
+  683  ls
+  684  cd yum.repos.d/
+  685  ls
+  686  vi CentOS6Media.repo 
+  687  ls
+  688  cd ..
+  689  cd /mnt/iso
+  690  ls
+  691  cd packages
+  692  cd Packages/
+  693  ls
+  694  ls -l *devel*
+  695  ls -l kernel*devel*
+  696  cd ..
+  697  yum -qa kernel_devel
+  698  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  699  yum -i kernel-devel-2.6.32-431.el6.x86_64.rpm
+  700  vi /etc/yum.conf
+  701  ls
+  702  cd Packages/
+  703  yum -i kernel-devel-2.6.32-431.el6.x86_64.rpm
+  704  yum repolist all
+  705  yum-config-manager --enable centos6-media
+  706  yum repolist all
+  707  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  708  yum-config-manager --disable base
+  709  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  710  cd ..
+  711  pwd
+  712  cd ..
+  713  pwd
+  714  cd ..
+  715  ls
+  716  cd etc
+  717  ls
+  718  cd yum.repos.d
+  719  ls
+  720  vi CentOS6Media.repo 
+  721  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  722  cd ..
+  723  vi repo.conf
+  724  ls
+  725  ls re*.conf
+  726  vi yum.repos
+  727  ls
+  728  vi yum.conf
+  729  ls
+  730  cd yum.repos.d
+  731  ls
+  732  yum repolist all
+  733  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  734  yum-config-manager --disable extras
+  735  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  736  yum-config-manager --disable updates
+  737  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  738  rpl -qa kernel
+  739  rpl -qa kernel*
+  740  rpl -qa 
+  741  rpm -qa kernel
+  742  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  743  yum install kernel-devel-2.6.32-431.el6.x86_64.rpm
+  744  cd /mnt
+  745  ls
+  746  cd iso
+  747  ls
+  748  cd repodata
+  749  ls
+  750  cd ..
+  751  ls
+  752  cd Packages/
+  753  ls
+  754  rpm -ivh kernel-devel-2.6.32-431.el6.x86_64.rpm
+  755  rpm -qa kernel
+  756  yum list
+  757  yum list 
+  758  yum list |more
+  759  ssssssssssssssssssssssssssssss
+  760  yum list |more
+  761  ls kernel*
+  762  yum install kernel-debug-devel-2.6.32-431.el6.x86_64.rpm
+  763  yum list |more
+  764  yum list kernel\* |more
+  765  ls
+  766  cd ..
+  767  pwd
+  768  cd ..
+  769  pwd
+  770  cd ..
+  771  pwd
+  772  ls
+  773  cd mnt
+  774  ls
+  775  cd usb
+  776  ls
+  777  cd ..
+  778  cd usr
+  779  cd ..
+  780  cd usr
+  781  ls
+  782  cd src
+  783  ls
+  784  cd kernels
+  785  ls
+  786  cd ..
+  787  pwd
+  788  ls
+  789  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405/
+  790  ls
+  791  sh -x install.sh
+  792  ls
+  793  cd driver
+  794  ls
+  795  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405
+  796  ls
+  797  make -n
+  798  vi Makefile
+  799  ls
+  800  rm Makefile
+  801  cp MakefileBak Makefile
+  802  ls
+  803  vi Makefile
+  804  pwd
+  805  cd ..
+  806  pwd
+  807  cd ..
+  808  pwd
+  809  cd ..
+  810  pwd
+  811  ls
+  812  cd mnt
+  813  cd usb
+  814  ls
+  815  cd ..
+  816  cd mnt
+  817  ls
+  818  cd usbtmp
+  819  ls
+  820  cd ..
+  821  cd install
+  822  ls
+  823  cd drivers
+  824  ls
+  825  cd netcard
+  826  ls
+  827  cd mercury
+  828  ls
+  829  cd rtl8188C_8192C_usb_linux_v3.4.4_4749.20121105
+  830  ls
+  831  make
+  832  make clean
+  833  make
+  834  cd ..
+  835  pwd
+  836  cd ..
+  837  cd usr
+  838  pwd
+  839  cd ..
+  840  pwd
+  841  cd /
+  842  ls
+  843  cd usr
+  844  cd src
+  845  ls
+  846  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405/
+  847  ls
+  848  cd driver
+  849  ls
+  850  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405
+  851  ls
+  852  vi makeerr.txt
+  853  ls
+  854  vi Makefile
+  855  make clean
+  856  pwd
+  857  make -d
+  858  make -d clean
+  859  make -d -n 
+  860  make -d -n  |more
+  861  make clean
+  862  vi Makefile
+  863  lsusb
+  864  ls
+  865  vi Makefile
+  866  make -d -n  |more
+  867  make -d |more
+  868  vi Makefile
+  869  make -d |more
+  870  ls
+  871  pwd
+  872  cd ..
+  873  pwd
+  874  cd ..
+  875  ls
+  876  cd ..
+  877  ls
+  878  cd kernels
+  879  ls
+  880  cd 2.6.32-431.el6
+  881  cd 2.6.32-431.el6.x86_64
+  882  ls
+  883  cd ..
+  884  ls
+  885  cd 2.6.32-431.e16.x86_64
+  886  ls
+  887  cd ..
+  888  rm 2.6.32-431.e16.x86_64
+  889  rm -r 2.6.32-431.e16.x86_64
+  890  ls
+  891  cd 2.6.32-431.el6.x86_64
+  892  ls
+  893  cd ..
+  894  pwd
+  895  ls
+  896  rm rtl* -r -p
+  897  rm rtl* -r -f
+  898  ls
+  899  cd debug
+  900  ls
+  901  cd ..
+  902  pwd
+  903  mount --help
+  904  mount -l
+  905  cd /mnt/usb
+  906  ls
+  907  cd installs
+  908  ls
+  909  cd SystemDrivers
+  910  ls
+  911  cd Linux/
+  912  ls
+  913  cd WirelessCard/
+  914  ls
+  915  cd driver
+  916  ls
+  917  mount -l
+  918  unmount /mnt/usb
+  919  umount /mnt/usb
+  920  umount -f /mnt/usb
+  921  umount --help
+  922  pwd
+  923  cd /
+  924  umount /mnt/usb
+  925  lsusb
+  926  fdisk -l
+  927  mount /dev/sdb1 /mnt/usb
+  928  cd /mnt/usb
+  929  ls
+  930  cd Installs
+  931  ls
+  932  cd SystemDrivers/
+  933  ls
+  934  cd Linux/
+  935  ls
+  936  cd WirelessCard/
+  937  ls
+  938  cd linux
+  939  ls
+  940  cp --help
+  941  ls
+  942  cp * -r /usr/src/
+  943  cd /usr/src
+  944  ls
+  945  cd RTL8188C_8192C_USB_linux_v4.0.2_9000.20130911/
+  946  ls
+  947  sh -x install.sh
+  948  ls
+  949  cd driver
+  950  ls
+  951  cd rtl8188C_8192C_usb_linux_v4.0.2_9000.20130911
+  952  ls
+  953  cd ..
+  954  ls
+  955  cd ..
+  956  ls
+  957  cd /lib
+  958  ls
+  959  cd modules
+  960  ls
+  961  cd 2.6.32-431.el6.x86_64/
+  962  l
+  963  sls
+  964  ls
+  965  cd build/
+  966  ls
+  967  pwd
+  968  cd /mnt
+  969  cd usb
+  970  cd ..
+  971  cd usr
+  972  cd src
+  973  ls
+  974  cd RTL8188C_8192C_USB_linux_v4.0.2_9000.20130911/
+  975  ls
+  976  cd driver/
+  977  ls
+  978  cd rtl8188C_8192C_usb_linux_v4.0.2_9000.20130911
+  979  ls
+  980  clean
+  981  make clean
+  982  cd core
+  983  ls
+  984  shutdown --help
+  985  shutdown -P now
+  986  ls
+  987  lsusb
+  988  nname -r
+  989  grep kernel
+  990  +
+  991  lsusb
+  992  fdisk -l
+  993  mount /dev/sdb1 /mnt/usb
+  994  ls
+  995  cd /mnt/usb
+  996  ls
+  997  cd Installs
+  998  ls
+  999  cd SystemDrivers/
+ 1000  ls
+ 1001  cd Linux/
+ 1002  ls
+ 1003  cd WirelessCard/
+ 1004  ls
+ 1005  cd linux/
+ 1006  ls
+ 1007  cd NetCore/
+ 1008  ls
+ 1009  cp * -r /usr/src/
+ 1010  cd /usr/src
+ 1011  ls
+ 1012  cd RTL819xSU_usb_linux_v2.6.6.0.20120405/
+ 1013  ls
+ 1014  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405/
+ 1015  ls
+ 1016  sh -x install.sh
+ 1017  ls
+ 1018  cd driver
+ 1019  ls
+ 1020  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405
+ 1021  ls
+ 1022  make -d
+ 1023  cd ..
+ 1024  ls
+ 1025  cp rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405 8191su
+ 1026  ls
+ 1027  cp -r rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405 8191su
+ 1028  ls
+ 1029  rm 8191su -r
+ 1030  rm 8191su -r -f
+ 1031  cp -r rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405 8191su
+ 1032  ls
+ 1033  cd 8191su
+ 1034  ls
+ 1035  make
+ 1036  pwd
+ 1037  ls
+ 1038  pwd
+ 1039  cd ..
+ 1040  ls
+ 1041  pwd
+ 1042  cd ..
+ 1043  ls
+ 1044  cd ..
+ 1045  pwd
+ 1046  ls
+ 1047  rpm -qa linux-head*
+ 1048  rpm -qa linux-head
+ 1049  yum list linux-head
+ 1050  yum list linux-head\*
+ 1051  yum repolist all
+ 1052  yum list
+ 1053  yum list linux
+ 1054  yum list 
+ 1055  yum list |more
+ 1056  yun list installed
+ 1057  yum list installed
+ 1058  yum list installed 
+ 1059  yum list installed |more
+ 1060  yum install yum list available
+ 1061  yum install yum list linux\*
+ 1062  yum list linux\*
+ 1063  yum list linux \*
+ 1064  yum list linux*
+ 1065  yum list header*
+ 1066  rpm -q header
+ 1067  rpm -qa
+ 1068  rpm -qa |more
+ 1069  rpm -qa kernel |more
+ 1070  rpm -q kernel |more
+ 1071  rpm -q header |more
+ 1072  rpm -a header |more
+ 1073  rpm -a |more
+ 1074  rpm -a
+ 1075  rpm -qa
+ 1076  rpm -q tree
+ 1077  rpm -q kernel
+ 1078  pwd
+ 1079  cd ..
+ 1080  pwd
+ 1081  rpm -q kernel
+ 1082  rpm -q header
+ 1083  ls /mnt/iso
+ 1084  ls
+ 1085  pwd
+ 1086  cd mnt
+ 1087  ls
+ 1088  cd iso
+ 1089  ls
+ 1090  cd media
+ 1091  cd /
+ 1092  cd media
+ 1093  ls
+ 1094  cd iso
+ 1095  ls
+ 1096  cd centos
+ 1097  ls
+ 1098  cd ..
+ 1099  pwd
+ 1100  ls
+ 1101  cd centos
+ 1102  ls
+ 1103  cd ..
+ 1104  cd install
+ 1105  ls
+ 1106  cd ..
+ 1107  ls
+ 1108  cd iso
+ 1109  ls
+ 1110  cd centos
+ 1111  ls
+ 1112  cd ..
+ 1113  pwd
+ 1114  cd ..
+ 1115  ls
+ 1116  pwd
+ 1117  cd install
+ 1118  ls
+ 1119  pwd
+ 1120  cd ..
+ 1121  pwd
+ 1122  ls
+ 1123  cd iso
+ 1124  ls
+ 1125  mv *.* /media/iso/centos
+ 1126  cd /media/iso/centos
+ 1127  ls
+ 1128  pwd
+ 1129  ls
+ 1130  cd ..
+ 1131  pwd
+ 1132  cd ..
+ 1133  ls
+ 1134  cd mnt
+ 1135  ls
+ 1136  cd iso
+ 1137  ls
+ 1138  cd ..
+ 1139  pwd
+ 1140  cd ..
+ 1141  ls
+ 1142  cd media
+ 1143  cd iso
+ 1144  ls
+ 1145  cd centos
+ 1146  ls
+ 1147  mount -o loop CentOS-6.5-x86_64-bin-DVD1.iso /mnt/iso
+ 1148  cd //
+ 1149  cd ..
+ 1150  pwd
+ 1151  cd /
+ 1152  ls
+ 1153  pwd
+ 1154  cd mnt
+ 1155  cd iso
+ 1156  ls
+ 1157  yum list installed
+ 1158  yum list installed |more
+ 1159  yum list linux\* |more
+ 1160  cd ..pwd
+ 1161  pwd
+ 1162  cd ..
+ 1163  pwd
+ 1164  cd module
+ 1165  pwd
+ 1166  cd lib
+ 1167  ls --help
+ 1168  ls --help |more
+ 1169  find |grep header
+ 1170  cd ..
+ 1171  pwd
+ 1172  find |grep header
+ 1173  find |grep header |more
+ 1174  cd ..
+ 1175  ls
+ 1176  cd usr
+ 1177  ls
+ 1178  cd src
+ 1179  ls
+ 1180  cd kernels
+ 1181  ls
+ 1182  cd 2.6.32-431.el6.x86_64
+ 1183  ls
+ 1184  pwd
+ 1185  cd usr
+ 1186  ls
+ 1187  cd drivers
+ 1188  cd ..
+ 1189  cd drivers
+ 1190  ls
+ 1191  cd s390
+ 1192  ls
+ 1193  cd ..
+ 1194  pwd
+ 1195  cd ..
+ 1196  ls
+ 1197  cd ..
+ 1198  pwd
+ 1199  cd ..
+ 1200  ls
+ 1201  cd install
+ 1202  ls
+ 1203  cd drivers
+ 1204  ls
+ 1205  cd netcard
+ 1206  ls
+ 1207  netcore
+ 1208  cd netcore
+ 1209  ls
+ 1210  cd ..
+ 1211  ls
+ 1212  cd RTL819xSU_usb_linux_v2.6.6.0.20120405
+ 1213  ls
+ 1214  cd ..
+ 1215  pwd
+ 1216  ls
+ 1217  pwd
+ 1218  cd RTL819xSU_usb_linux_v2.6.6.0.20120405
+ 1219  pwd
+ 1220  ls
+ 1221  cd ..
+ 1222  pwd
+ 1223  cd ..
+ 1224  pwd
+ 1225  cd ..
+ 1226  cd src
+ 1227  pwd
+ 1228  cd usr/src
+ 1229  ls
+ 1230  cd RTL819xSU_usb_linux_v2.6.6.0.20120405/
+ 1231  ls
+ 1232  cd rtl*
+ 1233  ls
+ 1234  cd driver
+ 1235  ls
+ 1236  mv -l
+ 1237  mv --help
+ 1238  ls
+ 1239  pwd
+ 1240  cd ..
+ 1241  ls
+ 1242  cd ..
+ 1243  ls
+ 1244  cd kernels
+ 1245  ls
+ 1246  cd 2.6.32-431.el6.x86_64
+ 1247  ls
+ 1248  cd drivers
+ 1249  ls
+ 1250  pwd
+ 1251  cd /usr/src
+ 1252  cd RTL819xSU_usb_linux_v2.6.6.0.20120405/
+ 1253  ls
+ 1254  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405/
+ 1255  ls
+ 1256  cd driver
+ 1257  ls
+ 1258  cp -r -f 8191su /usr/src/kernels/2.6.32-431.el6.x86_64/drivers/
+ 1259  cd /usr/src/kernels/2.6.32-431.el6.x86_64/drivers/
+ 1260  ls
+ 1261  cd 8191su
+ 1262  ls
+ 1263  make
+ 1264  cd ..
+ 1265  pwd
+ 1266  cd ..
+ 1267  pwd
+ 1268  ls
+ 1269  cd lib
+ 1270  ls
+ 1271  cd ..
+ 1272  pwd
+ 1273  ls
+ 1274  cd include
+ 1275  ls
+ 1276  cd linux
+ 1277  ls
+ 1278  ls -l *header*
+ 1279  cd ..
+ 1280  pwd
+ 1281  ls
+ 1282  cd ..
+ 1283  ls
+ 1284  cd kernel
+ 1285  ls
+ 1286  cd ..
+ 1287  pwd
+ 1288  cd ..
+ 1289  pwd
+ 1290  ls
+ 1291  cd 2.6.32-431.el6.x86_64
+ 1292  ls
+ 1293  pwd
+ 1294  cd drivers
+ 1295  ls
+ 1296  cd ps3
+ 1297  ls
+ 1298  vi Makefile
+ 1299  ls
+ 1300  cd ..
+ 1301  pwd
+ 1302  ls
+ 1303  cd 8191su
+ 1304  ls
+ 1305  cd include
+ 1306  ls
+ 1307  cd ..
+ 1308  pwd
+ 1309  ls
+ 1310  make
+ 1311  cd /
+ 1312  ls
+ 1313  cd lib
+ 1314  ls
+ 1315  cd modules
+ 1316  ls
+ 1317  cd 2.6.32-431.el6.x86_64/
+ 1318  ls
+ 1319  cd sorce
+ 1320  cd source
+ 1321  ls
+ 1322  cd ..
+ 1323  ls
+ 1324  cd kernel
+ 1325  ls
+ 1326  cd lib
+ 1327  ls
+ 1328  cd ..
+ 1329  ls
+ 1330  pwd
+ 1331  cd ..
+ 1332  find |grep header
+ 1333  cd ..
+ 1334  pwd
+ 1335  ls
+ 1336  rpm -qa kernel
+ 1337  yum list kernel\*
+ 1338  yum install kernel-debug.x86_64
+ 1339  yum list kernel\*
+ 1340  yum list installed "kernel-*"
+ 1341  ls
+ 1342  cd ..
+ 1343  pwd
+ 1344  cd ..
+ 1345  ls
+ 1346  cd usr
+ 1347  cd src
+ 1348  ls
+ 1349  cd kernels
+ 1350  ls
+ 1351  cd 2.6.32-431.el6.x86_64
+ 1352  ls
+ 1353  cd drivers
+ 1354  ls
+ 1355  cd 8191su
+ 1356  ls
+ 1357  make
+ 1358  ln --help
+ 1359  ln --help |more
+ 1360  ls
+ 1361  cd ..
+ 1362  pwd
+ 1363  ls
+ 1364  cd 2.6.32-431.el6.x86_64
+ 1365  ls
+ 1366  cd lib
+ 1367  ls
+ 1368  cd ..
+ 1369  pwd
+ 1370  ls
+ 1371  cd kernel
+ 1372  ls
+ 1373  cd ..
+ 1374  cd /
+ 1375  cd lib
+ 1376  ls
+ 1377  cd modules
+ 1378  ls
+ 1379  cd 2.6.32-431.el6.x86_64
+ 1380  ls
+ 1381  cd build
+ 1382  ls
+ 1383  ls -l
+ 1384  cd ..
+ 1385  ls -l
+ 1386  ls
+ 1387  cd /usr/src
+ 1388  ls
+ 1389  cd kernels
+ 1390  ls
+ 1391  cd 2.6.32-431.el6.x86_64
+ 1392  ls
+ 1393  pwd
+ 1394  cd /lib/moudels
+ 1395  cd /
+ 1396  cd lib
+ 1397  ls
+ 1398  cd modules
+ 1399  ls
+ 1400  cd 2.6.32-431.el6.x86_64
+ 1401  ls
+ 1402  ln -s /usr/src/kernels/2.6.32-431.el6.x86_64 build
+ 1403  ls -l
+ 1404  cd build
+ 1405  ls
+ 1406  cd 2.6.32-431.el6.x86_64/
+ 1407  ls
+ 1408  pwd
+ 1409  ls
+ 1410  cd ..
+ 1411  pwd
+ 1412  cd ..
+ 1413  pwd
+ 1414  ls
+ 1415  ls -l
+ 1416  rm build
+ 1417  ls
+ 1418  ls -l
+ 1419  rm -r build
+ 1420  ls
+ 1421  ls -l
+ 1422  ln -s /usr/src/kernels/2.6.32-431.el6.x86_64/ build
+ 1423  pwd
+ 1424  ls
+ 1425  cd build
+ 1426  ls
+ 1427  cd ..
+ 1428  pwd
+ 1429  cd ..
+ 1430  ls
+ 1431  cd ..
+ 1432  pwd
+ 1433  cd ..
+ 1434  pwd
+ 1435  ls
+ 1436  cd src
+ 1437  ls
+ 1438  pwd
+ 1439  cd usr
+ 1440  cd src
+ 1441  ls
+ 1442  cd RTL819xSU_usb_linux_v2.6.6.0.20120405/
+ 1443  ls
+ 1444  cd rtl
+ 1445  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405/
+ 1446  ls
+ 1447  cd driver
+ 1448  ls
+ 1449  cd 8191su
+ 1450  ls
+ 1451  make
+ 1452  ls /bin/sh/
+ 1453  ls /bin/
+ 1454  whichis gcc
+ 1455  pwd
+ 1456  rpm -qa gcc
+ 1457  rpm -qa
+ 1458  yum list gcc\*
+ 1459  yum install gcc.x86_64
+ 1460  ls
+ 1461  make
+ 1462  ls *.ko
+ 1463  ls
+ 1464  make clean
+ 1465  make
+ 1466  pwd
+ 1467  cd ..
+ 1468  ls
+ 1469  cd RTL8188C_8192C_USB_linux_v4.0.2_9000.20130911/
+ 1470  ls
+ 1471  install
+ 1472  sh -x install.sh
+ 1473  ls
+ 1474  cd driver
+ 1475  ls
+ 1476  cd rtl8188C_8192C_usb_linux_v4.0.2_9000.20130911
+ 1477  ls
+ 1478  lsusb
+ 1479  pwd
+ 1480  cd ..
+ 1481  pwd
+ 1482  cd src
+ 1483  ls
+ 1484  cd RTL819xSU_usb_linux_v2.6.6.0.20120405/
+ 1485  ls
+ 1486  cd rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405/
+ 1487  ls
+ 1488  sh -x install.sh
+ 1489  cd ..
+ 1490  ls
+ 1491  cd ..
+ 1492  pwd
+ 1493  ls
+ 1494  cd RTL8188C_8192C_USB_linux_v4.0.2_9000.20130911/
+ 1495  ls
+ 1496  cd driver
+ 1497  ls
+ 1498  cd rtl8188C_8192C_usb_linux_v4.0.2_9000.20130911
+ 1499  ls
+ 1500  lsusb
+ 1501  ls
+ 1502  insmod 8192cu.ko
+ 1503  lsmod
+ 1504  lsmod |more
+ 1505  cd ..
+ 1506  cd /
+ 1507  cd etc
+ 1508  ls -l mod*
+ 1509  vi modprobe.conf
+ 1510  ls
+ 1511  pwd
+ 1512  ls mod*
+ 1513  ifconfig
+ 1514  lsusb
+ 1515  lsmod |grep 8192
+ 1516  ifconfig -a
+ 1517  service NetworkManager status
+ 1518  cd sysconfig
+ 1519  ls
+ 1520  cd network-scripts/
+ 1521  ls
+ 1522  vi ifcfg-eth0
+ 1523  nmcli -v
+ 1524  nmcli -V
+ 1525  ls
+ 1526  ifconfig
+ 1527  ifconfig -a
+ 1528  ifconfig wlan0 up
+ 1529  ifconfig
+ 1530  iwlist
+ 1531  iwlist scanning
+ 1532  iwlist scanning |more
+ 1533  yum list wpa\*
+ 1534  yum install wpa_supplicant.x86_64
+ 1535  pwd
+ 1536  cd /sbin
+ 1537  ll
+ 1538  ll wpa*
+ 1539  ls 
+ 1540  cd sysconfig
+ 1541  ls
+ 1542  ls sys*
+ 1543  cd ..
+ 1544  cd etc
+ 1545  cd sysconfig
+ 1546  ls
+ 1547  cd network
+ 1548  ls
+ 1549  cd networking
+ 1550  ls
+ 1551  cd ..
+ 1552  pwd
+ 1553  cd /etc
+ 1554  ls
+ 1555  ls wpa*
+ 1556  vi wpa_supplicant.conf
+ 1557  ls wpa*
+ 1558  cd wpa_supplicant/
+ 1559  ls
+ 1560  cd /
+ 1561  cd etc
+ 1562  cd sysconfig
+ 1563  cd network-scripts/
+ 1564  ls
+ 1565  cp ifcfg-eth0 ifcfg-wlan0
+ 1566  ls
+ 1567  ifconfig
+ 1568  vi ifcfg-wlan0
+ 1569  ifconfig
+ 1570  vi ifcfg-wlan0
+ 1571  ifconfig
+ 1572  vi ifcfg-wlan0
+ 1573  ifconfig
+ 1574  ifconfig -a
+ 1575  vi ifcfg-wlan0
+ 1576  iwconfig
+ 1577  vi ifcfg-wlan0
+ 1578  iwlist wlan0 scanning |more
+ 1579  iwconfig wlan0
+ 1580  ifconfig wlan0
+ 1581  ifconfig
+ 1582  ifup wlan0
+ 1583  service network status
+ 1584  ifconfig wlan0 up
+ 1585  ifup wlan0
+ 1586  iwconfig wlan0 key UtwHpQhJ
+ 1587  cd ..
+ 1588  pwd
+ 1589  wpa-supplicant --help
+ 1590  wpa_passprase 
+ 1591  cd ..
+ 1592  pwd
+ 1593  cd sbin
+ 1594  cd ..
+ 1595  cd usr
+ 1596  cd sbing
+ 1597  cd sbin
+ 1598  wpa_passprase ChinaNet-Vgbf UtwHpQhJ
+ 1599  cd ..
+ 1600  cd etc
+ 1601  ls
+ 1602  cd sysconfig
+ 1603  cd network-scripts/
+ 1604  ls
+ 1605  vi ifcfg-wlan0
+ 1606  ls
+ 1607  pwd
+ 1608  cd ..
+ 1609  wpa_passphrase ChinaNet-Vgbf UtwHpQhJ
+ 1610  vi ./wpa_supplicant/wpa_supplicant.conf 
+ 1611  wpa_passphrase ChinaNet-Vgbf UtwHpQhJ >>test.txt
+ 1612  ls
+ 1613  vi test.txt
+ 1614  ls
+ 1615  cd wpa_supplicant/
+ 1616  ls
+ 1617  vi wpa_supplicant.conf 
+ 1618  cd ..
+ 1619  pwd
+ 1620  cd wpa_supplicant/
+ 1621  ls
+ 1622  cd ..
+ 1623  wpa_supplicant
+ 1624  wpa_supplicant -iwlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf -Dwext -B
+ 1625  wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wext -B
+ 1626  cd wpa_supplicant/
+ 1627  ls
+ 1628  vi wpa_supplicant.conf 
+ 1629  ls
+ 1630  cd ..
+ 1631  pwd
+ 1632  wpa_supplicant -i wlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf -D wext -B
+ 1633  wpa_supplicant status
+ 1634  wpa_supplicant -i wlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf -D wext -B -O
+ 1635  wpa_supplicant -i wlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf -D wext -B
+ 1636  service network restart
+ 1637  ifconfig
+ 1638  ping google.com
+ 1639  service vsftpd status
+ 1640  cat /.sh_history
+ 1641  ls
+ 1642  cd ..
+ 1643  pwd
+ 1644  ls *history
+ 1645  ls
+ 1646  history
+ 1647  pwd
+ 1648  history >>cmd_his.txt
