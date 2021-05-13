@@ -12,7 +12,7 @@
                + --get-zones          Print predefined zones [P]
                + --list-all-zones     List everything added for or enabled in all zones [P]
                + 用来切换默认zone的命令
-                  -  --zone=<zone>        Use this zone to set or query options, else default zone
+                  -  --zone=\<zone\>        Use this zone to set or query options, else default zone
                        Usable for options marked with [Z]
          ```
               firewall-cmd --list-all
