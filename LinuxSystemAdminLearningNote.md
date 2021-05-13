@@ -3,10 +3,19 @@
    * 端口管理
       + 添加端口命令
          - 临时端口的添加
+         ```
+            firewall-cmd --add-port=443/tcp
+         ```
          - 永久端口的添加
+         ```
+            firewall-cmd --permanent --add-port=443/tcp
+         ```
          - 不同点
             1. 临时端口添加完, 立即生效, 永久端口添加后,不会立即生效,需要reload或防火墙服务要重启...
-            2. 
+            ```shell
+               firewall-cmd --reload
+            ```
+            2. ...
 # 文件和文件夹的基本操作
    * 文件或文件夹的创建
       + 文件夹的创建
