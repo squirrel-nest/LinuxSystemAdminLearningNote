@@ -1,6 +1,26 @@
 # 网络管理
 ## 防火墙
+   * 命令帮助
+      - firewall-cmd --help
+      - man firewall-cmd
    * 端口管理
+      + 查询命令
+         - 查询区域(zone)相关信息
+            * 方法 - 命令帮助 --> Zone Options
+               + --get-default-zone   Print default zone for connections and interfaces
+               + --get-active-zones   Print currently active zones
+               + --get-zones          Print predefined zones [P]
+               + --list-all-zones     List everything added for or enabled in all zones [P]
+               + 用来切换默认zone的命令
+                  -  --zone=<zone>        Use this zone to set or query options, else default zone
+                       Usable for options marked with [Z]
+         ```
+              firewall-cmd --list-all
+         ```
+         - 查询已设置的端口 - 非管理账号,需要 sudo
+         ```
+             [sudo] firewall-cmd --list-ports
+         ```
       + 添加端口命令
          - 临时端口的添加
          ```
